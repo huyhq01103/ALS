@@ -1,6 +1,6 @@
-import './js/custom.js'
-import 'normalize.css/normalize.css'
-import './styles/main.styl'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/main.scss';
+import './js/custom.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Custom()

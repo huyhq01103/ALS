@@ -33,8 +33,8 @@ module.exports = {
         }
       },
       {
-        test: /\.(styl|css)$/,
-        loader: 'style-loader!css-loader!stylus-loader'
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
@@ -61,6 +61,12 @@ module.exports = {
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/about.html',
+      inject: true,
+      chunks: ['index'],
+      filename: 'about.html'
+    }),
   ]
 }
