@@ -1,13 +1,13 @@
-$gutter-width: 1rem;
+$gutter-width: 30px;
 $outer-margin: 2rem;
 $gutter-compensation: ($gutter-width * 0.5) * -1;
 $half-gutter-width: $gutter-width * 0.5;
 
-$xs-min: 30rem;
-$sm-min: 48rem;
-$md-min: 64rem;
-$lg-min: 75rem;
-$xl-min: 100rem;
+$xs-min: 480px;
+$sm-min: 768px;
+$md-min: 992px;
+$lg-min: 1024px;
+$xl-min: 1170px;
 
 $container-sm: $sm-min + $gutter-width;
 $container-md: $md-min + $gutter-width;
@@ -239,7 +239,7 @@ $xl-viewport: "only screen and (min-width: 100em)";
 
 @media #{$sm-viewport} {
   .container {
-    width: $container-sm;
+    max-width: $container-sm;
   }
 
   .col-sm,
@@ -434,7 +434,7 @@ $xl-viewport: "only screen and (min-width: 100em)";
 
 @media #{$md-viewport} {
   .container {
-    width: $container-md;
+    max-width: $container-md;
   }
 
   .col-md,
@@ -629,7 +629,7 @@ $xl-viewport: "only screen and (min-width: 100em)";
 
 @media #{$lg-viewport} {
   .container {
-    width: $container-lg;
+    max-width: $container-lg;
   }
 
   .col-lg,
@@ -824,7 +824,7 @@ $xl-viewport: "only screen and (min-width: 100em)";
 
 @media #{$xl-viewport} {
   .container {
-    width: $container-xl;
+    max-width: $container-xl;
   }
 
   .col-xl,

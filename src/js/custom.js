@@ -63,3 +63,15 @@ window.onclick = function (event) {
     overlay()
   }
 }
+window.onclick = function (event) {
+  const target = this;
+  var classes = $(this).data('classes');
+  target.toggleClass(classes);
+  return false;
+}
+$(document).on('click', '[data-toggle="class"]', function () {
+  var $target = $($(this).data('target'));
+  var classes = $(this).data('classes');
+  $target.toggleClass(classes);
+  return false;
+});

@@ -1,12 +1,63 @@
 <header>
-    <div class="container">
-        <h1><a href="/"><img src="" alt="ALS">ALS</a></h1>
-        <ul>
-            <li><a href="index.html">Dịch vụ</a></li>
+    <div class="container d-flex align-items-center">
+        <h1 class="logo"><a href="/"><img src="/src/images/logo.png" alt="ALS">ALS</a></h1>
+        <ul class="main-nav">
+            <li><a href="service.html">Dịch vụ</a></li>
             <li><a href="about.html">Về ALS</a></li>
-            <li><a href="contacts.html">Khách hàng</a></li>
-            <li><a href="contacts.html">Tin tức</a></li>
+            <li><a href="customer.html">Khách hàng</a></li>
+            <li><a href="news.html">Tin tức</a></li>
             <li><a href="contacts.html">Liêm hệ</a></li>
         </ul>
-    </div>
+        <div class="right-nav">
+            <div class="hotline">
+                <p>Hotline</p>
+                <span>+84 24 3795 3838</span>
+            </div>
+            <div class="action-box">
+                <a href="#">Nhận tư vấn</a>
+                <a href="#">Tra cứu</a>
+            </div>
+            
+            <div class="search-nav">
+                <div class="btn-search"><img src="/src/images/ic_search.png" alt="search"></div>
+                <div class="search-content">
+                    <input type="text" placeholder="Tìm kiếm ...">
+                    <button class="search-submit"><img src="/src/images/ic_search_blue.png" alt="search"></button>
+                </div>
+            </div>
+            <div class="ico-user"></div>
+            
+            <div class="language">
+                <div class="btn-lang vi" data-toggle="collapse" data-target="#langModal">
+                    <span class="country">Vi</span>
+                </div>
+                <a href="#" class="logout">Thoát</a>
+                <div class="lang-nav collapse" id="langModal" data-toggle="collapse" data-target="#langModal">
+                    <div class="flag" data-flag="vi">Tiếng Việt</div>
+                    <div class="flag" data-flag="en">English</div>
+                </div>
+            </div>
+        </div>
+    </div><script>
+        const lang = document.querySelector('.btn-lang');
+        const langNav = document.querySelector('.lang-nav');
+        const country = document.querySelector('span.country');
+        const flag = document.querySelectorAll('.flag');
+        const flags = ['vi', 'en'];
+        flag.forEach(function(item) {
+            const dataFlag = item.dataset.flag;
+            item.addEventListener('click' , function() {
+                country.textContent  = dataFlag;
+                for(let i of flags) {
+                    if(lang.classList.contains(i)) {
+                        lang.classList.remove(i)
+                        lang.classList.add(dataFlag)
+                    }else{
+                        lang.classList.add(dataFlag)
+                    }
+    
+                }
+            })
+        })
+    </script>
 </header>

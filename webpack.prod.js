@@ -45,20 +45,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.styl$/,
-        exclude: /node_modules/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'stylus-loader'
-          }
-        ]
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
