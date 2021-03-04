@@ -19,7 +19,7 @@
             </div>
             
             <div class="search-nav">
-                <div class="btn-search"><img src="/src/images/ic_search.png" alt="search"></div>
+                <div class="btn-search toggle"><img src="/src/images/ic_search.png" alt="search"></div>
                 <div class="search-content">
                     <input type="text" placeholder="Tìm kiếm ...">
                     <button class="search-submit"><img src="/src/images/ic_search_blue.png" alt="search"></button>
@@ -28,36 +28,14 @@
             <div class="ico-user"></div>
             
             <div class="language">
-                <div class="btn-lang vi" data-toggle="collapse" data-target="#langModal">
-                    <span class="country">Vi</span>
+                <div class="btn-lang vi">
+                    <span class="country">VN</span>
                 </div>
-                <a href="#" class="logout">Thoát</a>
-                <div class="lang-nav collapse" id="langModal" data-toggle="collapse" data-target="#langModal">
+                <div class="lang-nav collapse" id="langModal">
                     <div class="flag" data-flag="vi">Tiếng Việt</div>
                     <div class="flag" data-flag="en">English</div>
                 </div>
             </div>
         </div>
-    </div><script>
-        const lang = document.querySelector('.btn-lang');
-        const langNav = document.querySelector('.lang-nav');
-        const country = document.querySelector('span.country');
-        const flag = document.querySelectorAll('.flag');
-        const flags = ['vi', 'en'];
-        flag.forEach(function(item) {
-            const dataFlag = item.dataset.flag;
-            item.addEventListener('click' , function() {
-                country.textContent  = dataFlag;
-                for(let i of flags) {
-                    if(lang.classList.contains(i)) {
-                        lang.classList.remove(i)
-                        lang.classList.add(dataFlag)
-                    }else{
-                        lang.classList.add(dataFlag)
-                    }
-    
-                }
-            })
-        })
-    </script>
+    </div>
 </header>

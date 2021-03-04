@@ -7,11 +7,20 @@
   <meta http-equiv="pragma" content="no-cache"/>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,400,500,600,700,800,900&display=swap&subset=vietnamese" rel="stylesheet">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 <body>
+	
 	<%= require('html-loader!./partials/header.html') %>
 	<div class="wraper">
+		<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+			<div class="carousel-cell"><img src="/src/images/banner/banner1.jpg" alt="1"></div>
+			<div class="carousel-cell"><img src="/src/images/banner/banner2.jpg" alt="2"></div>
+			<div class="carousel-cell"><img src="/src/images/banner/banner3.jpg" alt="3"></div>
+		</div>
 		<div class="container">
 			<div id="mainTab">
 			</div>
@@ -19,4 +28,15 @@
 	</div>
   	<%= require('html-loader!./partials/footer.html') %>
 </body>
-</html>+
+<!-- <script type="text/javascript" src="https:/code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https:/code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="https:/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+<script type="text/javascript">
+	// $('.main-carousel').flickity({
+	// 	// options
+	// 	cellAlign: 'left',
+	// 	contain: true
+	// });
+    </script>
+</html>
