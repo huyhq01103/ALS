@@ -16,7 +16,8 @@ module.exports = {
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    main: './src/js/custom.js',
   },
 
   // how to write the compiled files to disk

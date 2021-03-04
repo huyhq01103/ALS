@@ -1,0 +1,41 @@
+.input-control {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 88px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  width: percentage(225/885);
+  line-height: 20px;
+  &:first-child {
+      flex-grow: 1;
+  }
+  span {
+    font-weight: bold;
+    color: $text-color;
+    white-space: nowrap;
+  }
+  input, select {
+      border: none;
+      background: transparent;
+      color: $text-color;
+      flex-grow: 1;
+      display: block;
+      padding-left: 20px;
+      &:focus {
+          outline: none;
+          border: 0;
+      }
+      &::-webkit-input-placeholder { /* Edge */
+        color: $text-gray;
+      }
+      
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $text-gray;
+      }
+      
+      &::placeholder {
+        color: $text-gray;
+      }
+  }
+}

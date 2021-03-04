@@ -1,0 +1,19 @@
+.btn {
+    background: $secondary;
+    border-radius: 63px;
+    padding: 8px 20px;
+    border: 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 20px;
+}
+.btn-outlined {
+    border: 1px solid $secondary;
+    color: $secondary;
+    text-align: center;
+    background: transparent;
+}

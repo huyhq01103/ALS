@@ -15,11 +15,13 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
+@import 'layout/tabs';
 
 // Components and modules
 @import 'components/buttons';
 @import 'components/dropdown';
 @import 'components/navigation';
+@import 'components/forms';
 
 // Page-specific stylesheets
 @import 'pages/home';
