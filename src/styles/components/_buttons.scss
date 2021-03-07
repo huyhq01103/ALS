@@ -9,11 +9,27 @@
     font-weight: 600;
     white-space: nowrap;
     font-size: 13px;
-    line-height: 20px;
+    text-decoration: none;
+    &:hover {
+        background-color: $blue;
+        color: white
+    }
 }
 .btn-outlined {
     border: 1px solid $secondary;
     color: $secondary;
     text-align: center;
     background: transparent;
+    &:hover {
+        background-color: $secondary;
+        color: white;
+    }
+}
+.btn-lg {
+    width: 360px;
+    max-width: 100%;
+}
+.btn-white {
+    background-color: white;
+    color: $blue;
 }

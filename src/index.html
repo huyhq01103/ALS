@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>ALS Homepage</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="cache-control" content="no-cache" />
-  <meta http-equiv="pragma" content="no-cache" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="viewport"
-    content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-  <link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Encode+Sans:300,400,500,600,700,800,900&display=swap&subset=vietnamese"
-    rel="stylesheet" />
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <script type="text/javascript" src="https:/code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https:/code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https:/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
-
+  <%= require('html-loader!./partials/head.html') %>
 <body>
   <%= require('html-loader!./partials/header.html') %>
     <div class="wraper">
@@ -119,7 +99,7 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex justify-content-center mt-5"><button class="btn btn-outlined">Xem thêm các Dịch vụ
+            <div class="d-flex justify-content-center mt-5"><button class="btn btn-outlined btn-lg">Xem thêm các Dịch vụ
                 khác</button></div>
           </div>
         </section>
@@ -179,25 +159,68 @@
             <%= require('html-loader!./partials/customertab.html') %>
           </div>
         </section>
+        <section class="news">
+          <div class="container">
+            <div class="top-news">
+              <h3>Tin tức phổ biến</h3>
+              <a href="#">Các tin tức khác</a>
+            </div>
+            <div class="news-slider">
+              <div class="news-slider-item">
+                <div class="date">28.02.2021</div>
+                <a href="#"><img src="/src/images/news/news1.png" alt="news"></a>
+                <div class="news-slider-content">
+                  <h5>Chúng ta vẫn biết rằng, làm việc với một làm việc với một</h5>
+                  <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                    Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
+                  <a href="#" class="semore">Tìm hiểu thêm</a>
+                </div>
+              </div>
+              <div class="news-slider-item">
+                <div class="date">28.02.2021</div>
+                <a href="#"><img src="/src/images/news/news1.png" alt="news"></a>
+                <div class="news-slider-content">
+                  <h5>Chúng ta vẫn biết rằng, làm việc với một làm việc với một</h5>
+                  <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                    Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
+                  <a href="#" class="semore">Tìm hiểu thêm</a>
+                </div>
+              </div>
+              <div class="news-slider-item">
+                <div class="date">28.02.2021</div>
+                <a href="#"><img src="/src/images/news/news1.png" alt="news"></a>
+                <div class="news-slider-content">
+                  <h5>Chúng ta vẫn biết rằng, làm việc với một làm việc với một</h5>
+                  <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                    Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
+                  <a href="#" class="semore">Tìm hiểu thêm</a>
+                </div>
+              </div>
+              <div class="news-slider-item">
+                <div class="date">28.02.2021</div>
+                <a href="#"><img src="/src/images/news/news1.png" alt="news"></a>
+                <div class="news-slider-content">
+                  <h5>Chúng ta vẫn biết rằng, làm việc với một làm việc với một</h5>
+                  <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                    Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
+                  <a href="#" class="semore">Tìm hiểu thêm</a>
+                </div>
+              </div>
+              <div class="news-slider-item">
+                <div class="date">28.02.2021</div>
+                <a href="#"><img src="/src/images/news/news1.png" alt="news"></a>
+                <div class="news-slider-content">
+                  <h5>Chúng ta vẫn biết rằng, làm việc với một làm việc với một</h5>
+                  <p>Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                    Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.</p>
+                  <a href="#" class="semore">Tìm hiểu thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
     </div>
     <%= require('html-loader!./partials/footer.html') %>
-
-      <script type="text/javascript">
-        $(document).ready(function () {
-          $(".block-carousel").slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          });
-          $(".main-carousel").slick({
-            dots: true,
-            infinite: false,
-            speed: 300
-          });
-        });
-      </script>
 </body>
 
 </html>

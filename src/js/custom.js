@@ -1,10 +1,4 @@
 import $ from "jquery";
-// import jQueryBridget from ('jquery-bridget');
-// import Flickity from ('flickity');
-
-// make Flickity a jQuery plugin
-// jQueryBridget( 'flickity', Flickity, $ );
-$("h1").css("background", "purple");
 const tabItem = document.querySelectorAll(".item");
 const tabs = document.querySelectorAll(".tab, .guide");
 const btnModal = document.querySelectorAll(".guide, .btn-close");
@@ -78,14 +72,15 @@ window.onclick = function (event) {
     overlay();
   }
 };
-// $(document).on("click", '[data-toggle="class"]', function () {
-//   var $target = $($(this).data("target"));
-//   var classes = $(this).data("classes");
-//   $target.toggleClass(classes);
-//   return false;
-// });
+$(document).on("click", '[data-toggle="class"]', function () {
+  var $target = $($(this).data("target"));
+  var classes = $(this).data("classes");
+  $target.toggleClass(classes);
+  return false;
+});
 
 const lang = document.querySelector(".btn-lang");
+const scrollBtn = document.querySelector(".scroll-top");
 const langNav = document.querySelector(".lang-nav");
 const country = document.querySelector("span.country");
 const flag = document.querySelectorAll(".flag");
@@ -108,20 +103,32 @@ flag.forEach(function (item) {
     }
   });
 });
-// BANNER
-// var elem = document.querySelector('.main-carousel');
-// var flkty = new Flickity( elem, {
-//   // options
-//   cellAlign: 'left',
-//   contain: true
-// });
-// var flkty = new Flickity( '.main-carousel', {
-//   // options
-// });
-// $(document).on("click", '[data-toggle="class"]', function () {
-//   var $target = $($(this).data("target"));
-//   var classes = $(this).data("classes");
-//   $target.toggleClass(classes);
-//   return false;
-// });
+scrollBtn.addEventListener("click", function () {
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth'
+  });
+});
 
+$(document).ready(function() {
+  $('#mainNav .navigation__link').bind('click', function(e) {
+      e.preventDefault(); // prevent hard jump, the default behavior
+      var target = $(this).data("jumb"); // Set the target as variable
+      // perform animated scrolling by getting top-position of target-element and set it as scroll target
+      $('html, body').stop().animate({
+          scrollTop: $('#'+target).offset().top
+      }, 600);
+      return false;
+  });
+});
+
+$(window).scroll(function() {
+  var scrollDistance = $(window).scrollTop();
+  $('.page-section').each(function(i) {
+      if ($(this).position().top <= scrollDistance) {
+          $('.navigation .navigation__link.active').removeClass('active');
+          $('.navigation .navigation__link').eq(i).addClass('active');
+      }
+  });
+}).scroll();

@@ -1,0 +1,131 @@
+@mixin tablet {
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+
+
+// Define size of media screen
+@mixin tiny-screen() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin small-screen() {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+@mixin medium-screen() {
+  @media only screen and (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin landscape-mobile() {
+  @media only screen and (max-width: 736px) {
+    @content;
+  }
+}
+
+@mixin horizontal-mobile() {
+  @media only screen and (max-width: 769px) {
+    @content;
+  }
+}
+@mixin xs-screen() {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin big-screen() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin huge-screen() {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin screen_1366() {
+  @media only screen and (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin laptop_screen() {
+  @media only screen and (max-width: 1450px) {
+    @content;
+  }
+}
+@mixin pc_1600_screen() {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin lg-screen() {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin onlyPC() {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - .02, null);
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

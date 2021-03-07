@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ALS</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="cache-control" content="no-cache"/>
-  <meta http-equiv="pragma" content="no-cache"/>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,400,500,600,700,800,900&display=swap&subset=vietnamese" rel="stylesheet">
-</head>
-<body>
-	<%= require('html-loader!./partials/header.html') %>
-	<div class="wraper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					ABC
-				</div>
-				<div class="col-md-8">
-					XYZ
-				</div>
-			</div>
-		</div>
-	</div>
-  	<%= require('html-loader!./partials/footer.html') %>
-</body>
+  <%= require('html-loader!./partials/head.html') %>
+  <body>
+    <%= require('html-loader!./partials/header.html') %>
+    <div class="wraper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">ABC</div>
+          <div class="col-md-8">XYZ</div>
+        </div>
+      </div>
+    </div>
+    <%= require('html-loader!./partials/footer.html') %>
+  </body>
 </html>

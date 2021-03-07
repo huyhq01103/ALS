@@ -1,0 +1,50 @@
+.service-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    color: $text-color;
+    transition: all 0.3s ease;
+    h4 {
+        font-size: 16px;
+    }
+    &:hover {
+        z-index: 9;
+        img {
+            transform: scale(1.1);
+        }
+        
+    }
+    img {
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    .service-img {
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+    }
+    .service-item-content {
+        background: $blue;
+        color: white;
+        padding: 30px;
+        flex-grow: 1;
+    }
+    &.service-item-white {
+        .service-img {
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        h5 {
+            margin-bottom: 15px;
+        }
+        .service-item-content {
+            padding: 20px 0 0;
+            background: white;
+            color: $text-color;
+        }
+    }
+}
+.top-banner {
+    img {
+        width: 100%;
+    }
+}

@@ -63,14 +63,44 @@ module.exports = {
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/about.html",
+      template: "./src/terminal.html",
       inject: true,
       chunks: ["index"],
-      filename: "about.html",
+      filename: "terminal.html",
     }),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
+    new HtmlWebpackPlugin({
+      template: "./src/service.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "service.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/training.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "training.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/transportion.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "transportion.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/values.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "values.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/warehouse.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "warehouse.html",
+    }),
+    // new webpack.ProvidePlugin({
+    //   $: "jquery",
+    //   jQuery: "jquery",
+    // }),
   ],
 };

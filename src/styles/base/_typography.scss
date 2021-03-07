@@ -1,5 +1,5 @@
-body {
-    font-family: $sansSerif, sans-serif;
+body, html {
+    font-family: $sansSerif;
     font-weight: normal;
     color: $body-color;
     line-height: $baseLineHeight;
@@ -16,7 +16,7 @@ body {
   
   // Header Styles
   h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 600;
     margin: 0;
   
     a {
@@ -37,6 +37,7 @@ body {
   }
   h2 {
     font-size: $font-size-h2;
+    
   }
   h3 {
     font-size: $font-size-h3;
@@ -50,27 +51,16 @@ body {
   h6 {
     font-size: $font-size-h6;
   }
-  .title-lg {
-    font-weight: 400;
-    color: $text-gray;
-    font-size: $font-size-h2;
-    b {
-      color: $primary;
-    }
-  }
-  .title-sm {
-    font-size: $font-size-h6;
-    color: $text-main;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
   .title-block {
     font-size: $font-size-h3;
     color: $text-gray;
-    font-weight: bold;
-    margin-bottom: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    @include xs-screen() {
+      font-size: 20px;
+    }
   }
-  .fw-semi {
+  .semi {
     font-weight: 600;
   }
   .title-primary {
@@ -78,4 +68,10 @@ body {
     font-weight: bold;
     line-height: 150%;
     margin-bottom: 10px;
+  }
+  .text-secondary {
+    color: $secondary !important;
+  }
+  .text-gray {
+    color: $text-gray;
   }

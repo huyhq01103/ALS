@@ -4,6 +4,13 @@
     z-index: 9;
     width: percentage(945/1170);
     filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.1));
+    @include xs-screen() {
+      width: 100%;
+      margin: -40px auto 0;
+    }
+}
+.customer-tab {
+  color: #626262;
 }
 .top-tabs {
   display: flex;
@@ -26,6 +33,7 @@
     align-items: center;
     white-space: nowrap;
     border-bottom: 3px solid transparent;
+    color: $text-color;
     &.active {
       border-bottom: 3px solid $secondary;
     }
@@ -40,7 +48,6 @@
 .tab-content {
   width: 100%;
   padding: 40px 0;
-  background: white;
 }
 #mainTab {
   .top-tabs {
@@ -117,6 +124,25 @@
     padding: 25px 30px;
     border-radius: 0px 5px 5px 5px;
     background: white;
+  }
+  @include xs-screen() {
+    .top-tabs {
+      .tab {
+        font-size: 10px;
+      }
+    }
+    .item {
+      .d-flex {
+        flex-direction: column;
+      }
+      .input-control {
+        width: 100%;
+        margin: 0 0 15px;
+      }
+      .btn {
+        margin:  0 !important;
+      }
+    }
   }
 }
 

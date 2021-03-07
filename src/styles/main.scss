@@ -1,6 +1,6 @@
 // Sass utilities
 @import 'helpers/variables';
-@import 'helpers/functions';
+@import 'helpers/breakpoints';
 @import 'helpers/mixins';
 
 // Vendors and external stylesheets
@@ -25,4 +25,6 @@
 
 // Page-specific stylesheets
 @import 'pages/home';
+@import 'pages/service';
 @import 'pages/contact';
+@import 'pages/terminal';
