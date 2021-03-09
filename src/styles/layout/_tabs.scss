@@ -136,7 +136,7 @@
         flex-direction: column;
       }
       .input-control {
-        width: 100%;
+        width: 100% !important;
         margin: 0 0 15px;
       }
       .btn {
@@ -151,12 +151,12 @@
   display: none;
 }
 .item {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0.5s;
-  animation-name: fade;
-  animation-duration: 0.5s;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
   display: none;
   &.active {
     display: block;
+    animation-fill-mode: backwards;
+    animation-name: fade;
   }
 }
