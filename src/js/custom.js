@@ -111,7 +111,11 @@ scrollBtn.addEventListener("click", function () {
   });
 });
 
+
 $(document).ready(function() {
+  const state = {
+    isOpen : false,
+  }
   $('#mainNav .navigation__link').bind('click', function(e) {
       e.preventDefault(); // prevent hard jump, the default behavior
       var target = $(this).data("jumb"); // Set the target as variable
@@ -121,6 +125,38 @@ $(document).ready(function() {
       }, 600);
       return false;
   });
+  var menu = $('.right-nav'),
+      menuOverlay = $('.nav-overlay');
+  function curtainUp() {
+    menuOverlay.removeClass('curtain-down')
+    menuOverlay.addClass('curtain-up')
+  }
+
+  function curtainDown() {
+    menuOverlay.removeClass('curtain-up')
+    menuOverlay.addClass('curtain-down')
+  }
+  $('#hamburger').bind('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('is-active');
+    $('body').toggleClass('overhiden');
+    menu.toggleClass('is-active');
+    if (state.isOpen) {
+      curtainDown()
+      state.isOpen = false
+      return
+    }else {
+      curtainUp()
+      state.isOpen = true
+    }
+  })
+  $('#main-nav .nav-item').bind('click', function(e) {
+    var menu = $('.main-nav');
+    $('#hamburger').removeClass('is-active');
+    $('body').removeClass('overhiden');
+    menu.removeClass('is-active');
+    state.isOpen = false
+  })
 });
 
 $(window).scroll(function() {
