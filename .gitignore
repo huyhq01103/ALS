@@ -1,2 +1,4 @@
-/node_modules
-/dist
+*.log
+*.lock
+node_modules
+.idea

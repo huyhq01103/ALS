@@ -1,0 +1,390 @@
+header {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  .logo {
+    width: 105px;
+    a {
+      display: block;
+      width: 100%;
+      font-size: 0;
+      // background: url('../images/logo.png') no-repeat center center;
+      // background-size: cover;
+    }
+  }
+  .main-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 50px;
+    li {
+      list-style: none;
+      padding: 0 17px;
+      a {
+        font-size: 13px;
+        font-weight: 600;
+        color: $body-color;
+        &:hover {
+          color: $primary;
+          text-decoration: none;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+  .right-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+  }
+  .hotline {
+    font-size: 11px;
+    font-weight: 500;
+    color: $text-gray;
+    margin-right: 30px;
+    p {
+      margin: 0;
+    }
+    span {
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+  .action-box {
+    border-radius: 59px;
+    background: $secondary;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin-right: 9px;
+    a {
+      color: white;
+      padding: 0 20px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-decoration: none;
+      &:first-child {
+        border-right: 1px solid white;
+      }
+    }
+  }
+  .group-icon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .ico-user {
+      width: 30px;
+      height: 30px;
+      background: url('../images/user.svg') no-repeat center center;
+      text-decoration: none;
+      margin: 0 0 0 20px;
+  }
+  .search-nav {
+    position: relative;
+    .btn-search {
+      width: 40px;
+      height: 40px;
+      background-color: $blue;
+      color: white;
+      border-radius: 50%;
+      padding: 11px;
+      cursor: pointer;
+      img {
+        max-width: 100%;
+      }
+    }
+    .search-content {
+      // display: none;
+      position: absolute;
+      top: 105%;
+      left: 50%;
+      margin-left: -125px;
+      width: 250px;
+      z-index: 9;
+      input {
+        border: 1px solid $blue;
+        background: white;
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 59px;
+        color: $text-gray;
+        padding: 10px 20px;
+        width: 100%;
+      }
+      .search-submit {
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        background-color: transparent;
+        border: none;
+        width: 18px;
+        height: 18px;
+        padding: 0;
+      }
+    }
+  }
+  .language {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    position: relative;
+  }
+
+  .language .btn-lang {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 20px;
+    span {
+      margin-right: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  .language .btn-lang::after {
+    content: "";
+    transform: translate3d(0, -15%, 0) rotate(130deg);
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1;
+    height: 8px;
+    width: 8px;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid #424242;
+    border-right: 1px solid #424242;
+    box-shadow: 0 0 0 lightgrey;
+    transition: all 200ms ease;
+    outline: none;
+  }
+
+  .language .country {
+    text-transform: capitalize;
+    width: 15px;
+  }
+
+  .language .lang-nav {
+    display: none;
+    position: absolute;
+    width: 110px;
+    right: 0;
+    top: 100%;
+    background: white;
+    color: black;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+
+  .language .lang-nav div {
+    padding: 5px 15px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .language .lang-nav div:last-child {
+    border-bottom: none;
+  }
+
+  .language .lang-nav.show {
+    display: block;
+  }
+}
+.toggle {
+  & + div {
+    display: none;
+  }
+  &.active + div {
+    display: block;
+  }
+}
+
+.navbar-burger {
+  color: #4a4a4a;
+  cursor: pointer;
+  display: block;
+  height: 25px;
+  position: relative;
+  width: 25px;
+  margin-left: auto;
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 2px;
+    left: calc(50% - 10px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: 86ms;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-out;
+    width: 20px;
+    &:nth-child(1) {
+      top: calc(50% - 6px);
+    }
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+    &:nth-child(3) {
+      top: calc(50% + 4px);
+    }
+  }
+  &.is-active {
+    span:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar-burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+    .nav-overlay {
+        visibility: hidden;
+        position: fixed;
+        top: 60px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        background: $blue;
+        border-radius: 50%;
+        transform: translateY(100%) scale(0);
+        animation-duration: .6s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        &.curtain-down {
+            animation-name: curtainDown;
+        }
+        &.curtain-up {
+            animation-name: curtainUp;
+        }
+    }
+    header .right-nav {
+        display: none;
+        opacity: 0;
+        position: relative;
+        animation-duration: .6s;
+        animation-timing-function: ease-in-out;
+        
+        &.is-active {
+            max-height: 100vh;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            height: calc(100% - 60px);
+            width: 100%;
+            padding: 0 30px;
+            text-align: center;
+            z-index: 999;
+            justify-content: center;
+            animation-fill-mode: forwards;
+            animation-name: fade;
+            .navbar-item {
+                display: block;
+                font-size: 20px;
+                padding: 5px 0;
+                a {
+                    color: white;
+                }
+            }
+            .group-icon {
+                padding: 5px 25px;
+                margin: 15px 0;
+                border-radius: 35px;
+                background-color: white;
+            }
+            .main-nav {
+                flex-direction: column;
+                padding-left: 0;
+                order: -2;
+            }
+            .hotline{
+                color: white;
+                margin: 15px 0;
+                width: 100%;
+                span {
+                    color: white;
+                }
+            }
+            .search-nav {
+                .search-content {
+                    margin-left: -72px;
+                }
+            }
+        }
+    }
+    .nav-brand {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@keyframes curtainUp {
+    0% {
+      border-radius: 50%;
+      transform: translateY(100%) scale(1);
+      visibility: visible;
+      opacity: 1;
+    }
+    50% {
+      border-radius: 50%;
+    }
+    100% {
+      transform: translateY(0%) scale(3, 1);
+      visibility: visible;
+      opacity: 1;
+      border-radius: 0;
+    }
+  }
+  
+  @keyframes curtainDown {
+    0% {
+      border-radius: 0;
+      transform: translateY(0%) scale(3, 1);
+      opacity: 1;
+      visibility: visible;
+    }
+    50% {
+      opacity: 1;
+      visibility: visible;
+      border-radius: 50%;
+    }
+    99% {
+      transform: translateY(100%) scale(0);
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%) scale(0);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  .overhiden {
+      overflow: hidden;
+  }
