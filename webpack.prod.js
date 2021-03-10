@@ -46,8 +46,20 @@ module.exports = {
         ]
       },
       {
-        test: /\.(s*)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
@@ -56,9 +68,9 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              name: 'images/[name].[ext]',
+              name: '[path][name].[ext]',
               esModule: false,
-              limit: 8192
+              limit: false
             }
           }
         ]
@@ -70,10 +82,46 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), // cleans output.path by default
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      inject: 'body',
-      chunks: ['index'],
-      filename: 'index.html'
+      template: "./src/pages/index.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/terminal.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "terminal.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/service.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "service.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/training.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "training.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/transportion.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "transportion.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/values.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "values.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/warehouse.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "warehouse.html",
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].min.css',

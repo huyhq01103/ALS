@@ -59,7 +59,7 @@
         font-weight: 600;
         transition: all 0.3s ease;
         &:hover {
-            background: $secondary url('/src/images/frame.png') no-repeat 95% 90%;
+            background: $secondary url('../images/frame.png') no-repeat 95% 90%;
             color: white;
         }
     }
@@ -92,7 +92,7 @@
     list-style: none;
     padding: 0;
     li {
-        background: url('/src/images/check.png') no-repeat left center;
+        background: url('../images/check.png') no-repeat left center;
         padding-left: 35px;
         color: white;
         line-height: 250%;
@@ -110,7 +110,7 @@
         padding-right: 30px;
         font-size: 11px;
         line-height: 140%;
-        background: url('/src/images/ic_download.svg') no-repeat right center;
+        background: url('../images/ic_download.svg') no-repeat right center;
         filter: grayscale(100%);   
     }
     &.active {

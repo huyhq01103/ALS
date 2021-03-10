@@ -57,43 +57,43 @@ module.exports = {
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./src/pages/index.html",
       inject: true,
       chunks: ["index"],
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/terminal.html",
+      template: "./src/pages/terminal.html",
       inject: true,
       chunks: ["index"],
       filename: "terminal.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/service.html",
+      template: "./src/pages/service.html",
       inject: true,
       chunks: ["index"],
       filename: "service.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/training.html",
+      template: "./src/pages/training.html",
       inject: true,
       chunks: ["index"],
       filename: "training.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/transportion.html",
+      template: "./src/pages/transportion.html",
       inject: true,
       chunks: ["index"],
       filename: "transportion.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/values.html",
+      template: "./src/pages/values.html",
       inject: true,
       chunks: ["index"],
       filename: "values.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/warehouse.html",
+      template: "./src/pages/warehouse.html",
       inject: true,
       chunks: ["index"],
       filename: "warehouse.html",
