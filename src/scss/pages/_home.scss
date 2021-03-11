@@ -34,7 +34,7 @@
     margin: 0 auto;
     left: 50%;
     transform: translate(-50%, 0);
-    bottom: 20%;
+    bottom: 25%;
     background: transparent;
     text-align: left;
     opacity: 1;
@@ -83,12 +83,13 @@
 
 .carousel-content {
   position: absolute;
-  bottom: 30%;
+  bottom: 32.2%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 9;
   h2 {
     // width: percentage(384/1200);
+    line-height: 130%;
     font-weight: 600;
     color: white;
   }
@@ -122,7 +123,7 @@
 }
 
 .top-block, .top-block-lg {
-  width: percentage(570/1170);
+  width: percentage(565/1140);
   text-align: center;
   margin: 80px auto 40px;
   .semi {
@@ -134,6 +135,7 @@
     font-weight: 500;
     color: $blue;
     margin: 5px 0 20px;
+    line-height: 37px;
     @include xs-screen() {
       font-size: 20px;
     }
@@ -159,6 +161,7 @@
 }
 .block-carousel, .news-slider {
   position: relative;
+  margin: 0 -10px;
   &::before, &::after {
     content: '';
     position: absolute;
@@ -177,7 +180,7 @@
   }
   .carousel-item {
     width: 100%;
-    padding-right: 20px;
+    padding: 0 10px;
     border-radius: 5px;
     overflow: hidden;
     img {
@@ -189,8 +192,9 @@
     h4 {margin: 20px 0 10px;}
   }
   .news-slider-item {
-    padding-right: 30px;
+    padding: 0 15px;
   }
+
   slick-slide:focus {
     outline: none;
   }
@@ -281,18 +285,21 @@
 .service {
   overflow: hidden;
   background-color: white;
+  .btn.btn-outlined {
+    margin-top: 50px;
+  }
 }
 .about-block {
   position: relative;
 }
 .about-content {
   position: absolute;
-  top: 60px;
+  top: 58px;
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   // align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   @include xs-screen {
     flex-wrap: wrap;
     position: static;
@@ -303,7 +310,7 @@
     border-radius: 5px;
     text-align: center;
     font-size: 16px;
-    padding: 30px;
+    padding: 34px 15px 27px;
     width: percentage(270/1140);
     position: relative;
     @include xs-screen {
@@ -324,12 +331,22 @@
     }
     h3 {
       color: $secondary;
+      line-height: 37px;
+      margin-bottom: 2px;
     }
   }
 }
 
 .customer{
-  padding: 40px 0;
+  padding: 40px 0 80px;
+  h4 {
+    margin-bottom: 19px;
+  }
+  .text-center {
+    img {
+      padding: 0 20px;
+    }
+  }
   @include xs-screen() {
     .d-flex {
       flex-wrap: wrap;
@@ -337,12 +354,18 @@
     }
   }
 }
+.brand-category {
+  padding-left: 30px;
+  @include xs-screen() {
+    padding-left: 0;
+  }
+}
 .brand-item {
   background-color: white;
   border: 1px solid #EEEEEE;
   box-sizing: border-box;
   border-radius: 5px;
-  width: percentage(118/808);
+  width: percentage(118/818);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,11 +382,12 @@
 }
 
 section.news {
-  padding: 50px 0;
+  padding: 61px 0 50px;
   background-color: $blue;
   color: white;
   overflow: hidden;
   .news-slider {
+    margin: 0 -15px;
     &::before, &::after {
       background-color: #006B99;
     }
@@ -393,6 +417,7 @@ section.news {
       font-size: 16px;
       font-weight: 600;
       margin: 20px 0 10px;
+      line-height: 22px;
     }
     p {
       color: rgba($color: #fff, $alpha: 0.8);

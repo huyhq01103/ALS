@@ -1,24 +1,31 @@
 footer {
+    border-top: 2px solid $secondary;
     background: $blueDark;
     color: white;
-    padding: 60px 0;
+    padding: 58px 0;
     position: relative;
-    // @include xs-screen90 {
-    //     .footer-logo {
-    //         margin: 0 auto;
-    //     }
-    // }
+    
+    .footer-logo {
+        width: 166px;
+        margin-bottom: 50px;
+        @include xs-screen() {
+            margin-bottom: 15px;
+        }
+    }
     .footer-item {
         align-items: flex-start;
-        margin-top: 15px;
+        margin-top: 18px;
+        line-height: 21px;
         img {
-            margin: 3px 10px 0 0;
+            margin: 3px 17px 0 0;
             height: 15px;
             width: 11px;
         }
     }
     .footer-navs {
+        padding-left: 35px;
         @include xs-screen() {
+            padding: 0;
             flex-wrap: wrap;
             margin-top: 15px;
         }
@@ -29,17 +36,18 @@ footer {
         }
         .footer-nav-title {
             color: $secondary;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-weight: 600;
         }
         a {
             color: white;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
     }
     .top-footer {
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 50px;
         @include xs-screen() {
             margin: 15px 0;
             flex-direction: column;
@@ -48,8 +56,11 @@ footer {
         }
     }
     .top-footer-label {
+        margin-left: 35px;
+        font-size: 11px;
         .semi {
-            margin-bottom: 5px;
+            font-size: 13px;
+            margin-bottom: 2px;
         }
     }
     .dky {
@@ -58,7 +69,7 @@ footer {
         padding: 10px 100px 10px 20px;
         position: relative;
         display: flex;
-        margin-left: 50px;
+        margin-left: 54px;
         @include xs-screen() {
             margin: 10px 0;
             width: 100%;
@@ -81,7 +92,7 @@ footer {
         }
     }
     .footer-bottom {
-        margin-top: -40px;
+        margin-top: -46px;
         position: relative;
         z-index: 9;
         justify-content: space-between;
@@ -108,7 +119,7 @@ footer {
             width: 40px;
             height: 40px;
             &:first-child {
-                margin-left: 30px;
+                margin-left: 28px;
             }
         }
     }
@@ -126,4 +137,7 @@ footer {
     transform: rotate(270deg);
     background-size: 7px 14px;
     cursor: pointer;
+}
+.copyright {
+    font-size: 11px;
 }

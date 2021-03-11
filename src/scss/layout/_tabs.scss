@@ -1,8 +1,8 @@
 .search-tab {
-    margin: -85px auto 0;
+    margin: -90px auto 0;
     position: relative;
     z-index: 9;
-    width: percentage(945/1170);
+    width: percentage(945/1140);
     filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.1));
     @include xs-screen() {
       width: 100%;
@@ -11,6 +11,10 @@
 }
 .customer-tab {
   color: #626262;
+  margin-top: -18px;
+  .btn.btn-outlined {
+    margin-top: -15px;
+  }
 }
 .top-tabs {
   display: flex;
@@ -21,7 +25,7 @@
   .tab {
     border: none;
     background: transparent;
-    padding: 16px 0;
+    padding: 18px 0;
     margin: 0 35px;
     font-size: 13px;
     font-weight: 600;
@@ -55,15 +59,17 @@
     list-style: none;
     align-items: center;
     justify-content: flex-start;
+    border: 0;
     .tab {
       border: none;
       margin: 0;
       border-radius: 5px 5px 0px 0px;
-      padding: 10px 30px 10px 15px;
+      padding: 10px 33px 10px 20px;
       min-width: percentage(185/1170);
       background: $blue;
       padding-bottom: 10px;
       font-size: 13px;
+      line-height: 20px;
       font-weight: 600;
       color: white;
       cursor: pointer;
@@ -124,6 +130,12 @@
     padding: 25px 30px;
     border-radius: 0px 5px 5px 5px;
     background: white;
+    .item {
+      .btn {
+        width: 120px;
+        margin-left: 20px;
+      }
+    }
   }
   @include xs-screen() {
     .top-tabs {

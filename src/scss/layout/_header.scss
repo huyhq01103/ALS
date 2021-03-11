@@ -1,6 +1,6 @@
 header {
   display: flex;
-  padding: 10px 0;
+  padding: 10px 0 9px;
   border-bottom: 1px solid #eee;
   .logo {
     width: 105px;
@@ -35,6 +35,7 @@ header {
   .right-nav {
     flex-grow: 1;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     z-index: 999;
   }
@@ -42,7 +43,8 @@ header {
     font-size: 11px;
     font-weight: 500;
     color: $text-gray;
-    margin-right: 30px;
+    margin-left: percentage(62/1140);
+    margin-right: percentage(30/1140);
     p {
       margin: 0;
     }
@@ -57,7 +59,7 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 0;
-    margin-right: 9px;
+    margin-right: 6px;
     a {
       color: white;
       padding: 0 20px;
@@ -79,7 +81,7 @@ header {
       height: 30px;
       background: url('../images/user.svg') no-repeat center center;
       text-decoration: none;
-      margin: 0 0 0 20px;
+      margin: 0 0 0 8px;
   }
   .search-nav {
     position: relative;
@@ -138,20 +140,20 @@ header {
     justify-content: space-around;
     margin-left: 20px;
     span {
-      margin-right: 10px;
+      margin-right: 17px;
       text-transform: uppercase;
     }
   }
 
   .language .btn-lang::after {
     content: "";
-    transform: translate3d(0, -15%, 0) rotate(130deg);
+    transform: translate3d(0, -15%, 0) rotate(135deg);
     text-align: center;
     cursor: pointer;
     padding: 0;
     z-index: 1;
-    height: 8px;
-    width: 8px;
+    height: 5px;
+    width: 5px;
     overflow: hidden;
     background: transparent;
     border: 0;
