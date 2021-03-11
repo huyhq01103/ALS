@@ -1,5 +1,5 @@
 .wraper-container {
-    margin-top: -270px;
+    margin-top: -293px;
 }
 .blue-box {
     background-color: rgba($color:$blue, $alpha: 0.95);
@@ -7,9 +7,13 @@
     color: white;
     width: percentage(556/1170);
     position: absolute;
-    right: 0;
+    right: 15px;
     bottom: 100%;
     margin-bottom: -30px;
+    h3 {margin-bottom: 20px;}
+    p:last-child {
+        margin-bottom: 0;
+    }
     @include xs-screen() {
         min-width: 100%;
         width: auto;
@@ -29,12 +33,14 @@
 }
 .page-section {
     padding: 40px 0 0;
-    overflow: hidden;
+    // overflow: hidden;
 }
 .grid-box {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: percentage(373/1140) percentage(373/1140) percentage(373/1140);
     grid-auto-flow: row;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     @include large-screen() {
         grid-template-columns: 50% 50%;
     }
@@ -42,7 +48,7 @@
         grid-template-columns: 100%;
     }
     &.grid-box-4 {
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: percentage(277/1140) percentage(277/1140) percentage(277/1140) percentage(277/1140);
         @include large-screen() {
             grid-template-columns: 50% 50%;
         }
@@ -51,8 +57,8 @@
         }
     }
     .grid-item {
-        margin: 5px;
-        padding: 20px;
+        // margin: 5px;
+        padding: 19px;
         border: 1px solid #eee;
         border-radius: 5px;
         min-height: 100px;
@@ -67,9 +73,10 @@
 .certificate-box {
     background-color: $blue;
     color: white;
-    padding: 35px 40px;
+    padding: 30px 40px 17px;
     border-radius: 5px 0px 0px 5px;
     position: relative;
+    margin-left: 23px;
     &::after {
         content: '';
         background-color: $blue;
@@ -95,8 +102,12 @@
         background: url('../images/check.png') no-repeat left center;
         padding-left: 35px;
         color: white;
-        line-height: 250%;
+        line-height: 260%;
     }
+}
+.prizes-list {
+    margin: -10px auto 0;
+    width: 77.4%;
 }
 .prize-item {
     display: flex;
@@ -106,11 +117,12 @@
     border-bottom: 1px solid #eee;
     color: black;
     font-weight: 600;
+    margin-bottom: 6px;
     .file {
-        padding-right: 30px;
+        padding-right: 45px;
         font-size: 11px;
         line-height: 140%;
-        background: url('../images/ic_download.svg') no-repeat right center;
+        background: url('../images/ic_download.svg') no-repeat 35px center;
         filter: grayscale(100%);   
     }
     &.active {
@@ -127,4 +139,21 @@
     @include xs-screen() {
         width: 100%;
     }
+}
+#about {
+    .text-gray {
+        padding: 30px 0 0 56px;
+    }
+}
+#advantages {
+    padding: 69px 0 0;
+}
+#location, #related {
+    padding: 35px 0 0;
+}
+#related {
+    margin-bottom: 30px;
+}
+.procedure-tabs {
+    margin-top: -27px;
 }

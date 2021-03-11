@@ -141,7 +141,10 @@
     }
   }
   .title-spacing {
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.65rem;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 10px;
   }
   .text-content {
     color: #626262;
@@ -446,6 +449,6 @@ section.news {
 section.support {
   background: url('../images/banner/support.jpg') no-repeat center center;
   background-size: cover;
-  padding: 32px 0;
+  padding: 28px 0 31px;
   color: white;
 }
