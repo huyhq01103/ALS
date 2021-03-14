@@ -1,11 +1,13 @@
 .service-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: $text-color;
     transition: all 0.3s ease;
     h4 {
         font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 7px !important;
     }
     &:hover {
         z-index: 9;
@@ -44,7 +46,14 @@
     }
 }
 .top-banner {
+    margin-bottom: 50px;
+    @include xs-screen() {
+        margin-bottom: 25px;
+    }
     img {
         width: 100%;
     }
+}
+section.service + .support{
+    margin-top: 40px;
 }
