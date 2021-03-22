@@ -59,15 +59,16 @@
     .about-partner-item {
         margin-bottom: 30px;
     }
-    .semore {
-        color: $text-color;
-        font-weight: 600;
-        margin-top: 25px;
-        display: inline-block;
-        border-bottom: 1px solid $text-color;
-        @include xs-screen() {
-            margin: 0 0 15px;
-        }
+    
+}
+.seemore {
+    color: $text-color;
+    font-weight: 600;
+    margin-top: 25px;
+    display: inline-block;
+    border-bottom: 1px solid $text-color;
+    @include xs-screen() {
+        margin: 0 0 15px;
     }
 }
 #history {

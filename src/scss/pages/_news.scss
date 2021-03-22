@@ -1,0 +1,31 @@
+.top-news-content {
+    display: flex;
+    justify-content: space-between;
+    .news-tabs {
+        display: flex;
+        .tab {
+            margin-right: 40px;
+            padding: 18px 0;
+            border-bottom: 3px solid transparent;
+            &.active {
+                border-color: $secondary;
+            }
+        }
+    }
+}
+.top-news {
+    border-bottom: 1px solid #eee;
+    margin: 46px 0 29px;
+    .title-primary {
+        margin: 4px 0 15px;
+    }
+}
+#news {
+    padding: 0 0 55px;
+    @include xs-screen() {
+        padding: 0 0 30px;
+    }
+    .pagination {
+        margin-top: 5px;
+    }
+}

@@ -1,4 +1,4 @@
-.service-item {
+.service-item, .card-item {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -20,7 +20,7 @@
         width: 100%;
         transition: all 0.3s ease;
     }
-    .service-img {
+    .service-img, .card-img {
         border-radius: 5px 5px 0 0;
         overflow: hidden;
     }
@@ -29,6 +29,21 @@
         color: white;
         padding: 30px;
         flex-grow: 1;
+    }
+    .card-item-content {
+        padding: 20px;
+        h5 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+    }
+    .card-item-content-full {
+        padding: 20px 0 23px;
+        h5 {
+            margin-bottom: 12px;
+        }
     }
     &.service-item-white {
         .service-img {
@@ -44,16 +59,60 @@
             color: $text-color;
         }
     }
+    .card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .seemore {
+            margin-top: 0;
+        }
+    }
+}
+.card-item {
+    margin-bottom: 10px;
 }
 .top-banner {
     margin-bottom: 50px;
+    position: relative;
     @include xs-screen() {
         margin-bottom: 25px;
+    }
+    .top-banner-content {
+        background: rgba($color: $secondary, $alpha: 0.9);
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 616px;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 60px;
+        border-radius: 5px;
+        text-align: center;
+        @include xs-screen() {
+            padding: 15px;
+        }
+        h3 {
+            letter-spacing: 0.3em;
+            margin-bottom: 10px;
+        }
+        div {
+            width: 73%;
+            margin: 0 auto;
+            @include xs-screen() {
+                width: 95%;
+            }
+        }
     }
     img {
         width: 100%;
     }
+    
 }
 section.service + .support{
     margin-top: 40px;
+}
+#csr {
+    padding: 0 0 55px;
 }

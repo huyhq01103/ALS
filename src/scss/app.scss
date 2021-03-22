@@ -20,7 +20,7 @@
 // Components and modules
 @import 'components/buttons';
 @import 'components/dropdown';
-@import 'components/navigation';
+@import 'components/global';
 @import 'components/forms';
 
 // Page-specific stylesheets
@@ -29,3 +29,5 @@
 @import 'pages/contact';
 @import 'pages/terminal';
 @import 'pages/aboutus';
+@import 'pages/subsidiary';
+@import 'pages/news';

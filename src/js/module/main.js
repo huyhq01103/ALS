@@ -1,8 +1,8 @@
 import $ from "jquery";
 import "slick-carousel";
 /* eslint-disable */
-const tabItem = document.querySelectorAll(".item");
-const tabs = document.querySelectorAll(".tab, .guide");
+const tabItem = document.querySelectorAll(".item, .sub-item");
+const tabs = document.querySelectorAll(".tab, .timeline-item");
 const btnModal = document.querySelectorAll(".guide, .btn-close");
 const modal = document.querySelector(".overlay");
 const body = document.querySelector("body");
@@ -24,7 +24,7 @@ toggle.forEach(function (item) {
 function toggleShow() {
   const target = this;
   const item =
-    target.classList.contains("tab") || target.classList.contains("guide")
+    target.classList.contains("tab") || target.classList.contains("timeline-item")
       ? target
       : target.parentElement;
   const group = item.dataset.actabGroup;
@@ -236,7 +236,7 @@ $(".main-carousel").slick({
   speed: 300,
 });
 
-$('.corevalue-slider').slick({
+$(".corevalue-slider").slick({
   dots: false,
   arrows: false,
   infinite: false,
@@ -272,7 +272,7 @@ $('.corevalue-slider').slick({
     // instead of a settings object
   ],
 });
-$('.core-full-slider').slick({
+$(".core-full-slider").slick({
   dots: false,
   arrows: false,
   infinite: false,
@@ -293,9 +293,24 @@ $('.core-full-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
       },
-    }
+    },
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
   ],
+});
+
+$(".mini .mini-img").click(function () {
+  var currentImage =  $(".maxi");
+  currentImage.addClass('fadeIn');
+	setTimeout(function () {
+		currentImage.removeClass('fadeIn');
+	}, 500);
+  currentImage.attr("src", $(this).attr("src"));
+});
+
+// TIME LINE 
+$('.timeline-item').click(function(){
+  $('.timeline-item').removeClass("active");
+  $(this).addClass("active");
 });

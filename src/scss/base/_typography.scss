@@ -19,7 +19,9 @@ body, html {
     font-weight: 600;
     margin: 0;
     line-height: $baseLineHeight;
-  
+    @include xs-screen() {
+      line-height: $baseLineHeight !important;
+    }
     a {
       font-weight: inherit;
     }
@@ -32,6 +34,9 @@ body, html {
   }
   
   // Text Styles
+  b{
+    font-weight: 600;
+  }
   em { font-style: italic; }
   strong { font-weight: bold; }
   .uppercase { text-transform: uppercase; }  
@@ -43,6 +48,9 @@ body, html {
   }
   h2 {
     font-size: $font-size-h2;
+    @include big-screen() {
+      font-size: 30px;
+    }
     @include xs-screen() {
       font-size: 22px;
     }

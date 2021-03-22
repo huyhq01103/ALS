@@ -454,4 +454,53 @@ section.support {
   background-size: cover;
   padding: 28px 0 31px;
   color: white;
+  @include xs-screen() {
+    text-align: center;
+    .justify-content-end {
+      margin-top: 15px;
+      justify-content: center !important;
+    }
+  }
+}
+ /*
+ * Animations
+ */
+
+ @keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+   }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+   }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slideInFromLeft {
+animation: slideInFromLeft .5s ease-in-out;
+}
+
+.slideInFromRight {
+animation: slideInFromRight .5s ease-in-out;
+}
+
+.fadeIn {
+animation: fadeIn .5s ease-in-out;
 }
