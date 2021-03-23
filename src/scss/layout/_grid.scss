@@ -40,7 +40,10 @@ $xl-viewport: "only screen and (min-width: 100em)";
   margin-right: $gutter-compensation;
   margin-left: $gutter-compensation;
 }
-
+.row > * {
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
 .row.reverse {
   flex-direction: row-reverse;
 }

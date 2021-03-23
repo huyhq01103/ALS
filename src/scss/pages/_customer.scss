@@ -1,0 +1,53 @@
+
+.customer-list {
+    background: #FFFFFF;
+    border-radius: 5px;
+    filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.1));
+    margin-bottom: 30px;
+    .customer-list-title {
+        padding: 20px;
+        text-align: center;
+        color: $primary;
+        font-weight: 600;
+        line-height: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .customer-list-content {
+        padding: 15px 0;
+    }
+    .tab {
+        padding: 5px 27px;
+        margin: 10px 0;
+        color: $gray;
+        font-weight: 600;
+        border-left: 3px solid transparent;
+        &.active, &:hover {
+            border-color: $secondary;
+            color: $text-color;
+        }
+    }
+}
+.customer {
+    .text-gray {
+        color: $gray;
+    }
+    .title-primary {
+        margin: 10px 0 40px;
+    }
+}
+.customer-content {
+    padding-bottom: 25px;
+    .item {
+        padding-left: 40px;
+        @include xs-screen() {
+            padding: 15px 0;
+        }
+    }
+    .brand-category {
+        padding: 0;
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

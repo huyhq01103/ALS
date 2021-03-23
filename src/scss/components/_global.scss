@@ -11,7 +11,8 @@
         text-align: center;
         line-height: 30px;
         border-radius: 50%;
-        &.active {
+        cursor: pointer;
+        &.active, &:hover {
             background-color: $secondary;
             color: white;
         }

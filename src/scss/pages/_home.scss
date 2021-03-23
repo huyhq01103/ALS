@@ -96,7 +96,7 @@
 }
 
 
-.wraper {
+.homepage {
   position: relative;
   &::before {
     content: '';
@@ -345,6 +345,9 @@
 
 .customer{
   padding: 40px 0 78px;
+  @include xs-screen() {
+    padding: 30px 0;
+  }
   h4 {
     margin-bottom: 19px;
   }
@@ -377,6 +380,9 @@
   justify-content: center;
   margin-bottom: 20px;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  @include xs-screen() {
+    width: 23%;
+  }
   img {
     object-fit: contain;
     width: 100%;

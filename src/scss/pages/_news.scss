@@ -7,8 +7,14 @@
             margin-right: 40px;
             padding: 18px 0;
             border-bottom: 3px solid transparent;
+            font-weight: 600;
+            color: $gray;
             &.active {
+                color: $text-color;
                 border-color: $secondary;
+            }
+            &:last-child {
+                margin-right: 33px;
             }
         }
     }
@@ -27,5 +33,117 @@
     }
     .pagination {
         margin-top: 5px;
+    }
+}
+.news-detail {
+    width: percentage(944/1140);
+    margin: -50px auto 0;
+    padding: 30px 40px;
+    position: relative;
+    z-index: 9;
+    @include xs-screen() {
+        width: 100%;
+        margin: 0px auto ;
+        padding: 0;
+    }
+}
+.top-news-detail {
+    text-align: center;
+    padding-bottom: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    padding: 40px 40px 0;
+    background: white;
+    border-radius: 5px 5px 0 0;
+    @include xs-screen() {
+        padding: 0;
+        position: static;
+    }
+    h3 {
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+}
+.top-news-detail-content {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray-light;
+}
+.top-news-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    .time {
+        margin-right: 25px;
+        @include xs-screen() {
+            margin-right: 15px;
+        }
+    }
+    .social {
+        margin-left: 25px;
+        @include xs-screen() {
+            margin-left: 15px;
+        }
+    }
+}
+.social {
+    display: flex;
+    color: $gray;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    span {
+        margin-right: 15px;
+        @include xs-screen() {
+            margin-right: 0;
+        }
+    }
+    .social-item {
+        margin-left: 15px;
+    }
+}
+.news-detail-content {
+    color: #1F2125;
+    margin-top: 3px;
+    line-height: 18.25px;
+    @include xs-screen() {
+        padding-top: 20px;
+    }
+    .block-image {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            margin: 10px 0 18px;
+        }
+        span {
+            font-size: 11px;
+            font-weight: 500;
+            color: $text-gray;
+        }
+    }
+    .social {
+        margin: 38px 0 15px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $gray-light;
+    }
+    .fb-comments {
+        width: 100%;
+    }
+}
+.title-center {
+    font-weight: 500;
+    margin-top: 28px;
+    margin-bottom: 40px;
+    @include xs-screen() {
+        margin: 20px 0;
+    }
+}
+#news-detail {
+    padding-bottom: 40px;
+    @include xs-screen() {
+        padding-bottom: 20px;
     }
 }
