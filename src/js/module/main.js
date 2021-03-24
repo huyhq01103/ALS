@@ -314,3 +314,63 @@ $('.timeline-item').click(function(){
   $('.timeline-item').removeClass("active");
   $(this).addClass("active");
 });
+
+// DROPDOWN
+
+function toggleClass(elem,className){
+  if (elem.className.indexOf(className) !== -1){
+    elem.className = elem.className.replace(className,'');
+  }
+  else{
+    elem.className = elem.className.replace(/\s+/g,' ') + 	' ' + className;
+  }
+
+  return elem;
+}
+
+// function toggleDisplay(elem){
+//   const curDisplayStyle = elem.style.display;			
+
+//   if (curDisplayStyle === 'none' || curDisplayStyle === ''){
+//     elem.style.display = 'block';
+//   }
+//   else{
+//     elem.style.display = 'none';
+//   }
+
+// }
+
+function toggleMenuDisplay(e){
+  const dropdown = e.currentTarget.parentNode;
+  const menu = dropdown.querySelector('.menu');
+  const title = dropdown.querySelector('.title');
+
+  toggleClass(menu,'hide');
+  toggleClass(title,'opened');
+}
+
+function handleOptionSelected(e){
+  toggleClass(e.target.parentNode, 'hide');			
+
+  const id = e.target.id;
+  const newValue = e.target.textContent + ' ';
+  const titleElem = document.querySelector('.dropdown .title');
+  toggleClass(titleElem,'opened');
+  titleElem.textContent = newValue;
+  $('.dropdown .title').removeClass('placeholder');
+  //trigger custom event
+  document.querySelector('.dropdown .title').dispatchEvent(new Event('change'));
+    //setTimeout is used so transition is properly shown
+
+}
+
+
+//get elements
+const dropdownTitle = document.querySelector('.dropdown .title');
+const dropdownOptions = document.querySelectorAll('.dropdown .option');
+
+//bind listeners to these elements
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+
+dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+

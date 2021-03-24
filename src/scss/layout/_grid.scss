@@ -3,21 +3,21 @@ $outer-margin: 2rem;
 $gutter-compensation: ($gutter-width * 0.5) * -1;
 $half-gutter-width: $gutter-width * 0.5;
 
-$xs-min: 480px;
-$sm-min: 720px;
-$md-min: 960px;
-$lg-min: 1140px;
-$xl-min: 1320px;
+$xs-min: 300px;
+$sm-min: 510px;
+$md-min: 690px;
+$lg-min: 930px;
+$xl-min: 1140px;
 
 $container-sm: $sm-min + $gutter-width;
 $container-md: $md-min + $gutter-width;
 $container-lg: $lg-min + $gutter-width;
 $container-xl: $xl-min + $gutter-width;
 
-$sm-viewport: "only screen and (min-width: 48em)";
-$md-viewport: "only screen and (min-width: 64em)";
-$lg-viewport: "only screen and (min-width: 75em)";
-$xl-viewport: "only screen and (min-width: 100em)";
+$sm-viewport: "only screen and (min-width: 576px)";
+$md-viewport: "only screen and (min-width: 768px)";
+$lg-viewport: "only screen and (min-width: 992px)";
+$xl-viewport: "only screen and (min-width: 1200px)";
 
 
 .container-fluid, .container {

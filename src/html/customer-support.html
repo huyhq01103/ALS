@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <include>_head.html</include>
+  <body>
+    <include>_header.html</include>
+    <div class="wraper">
+      <!-- SEARVICE  -->
+      <section id="customer-support">
+        <div class="container">
+          <div class="top-block-lg">
+            <h3 class="title">Kết nối với các chuyên gia của ALS</h3>
+            <div class="text-center">
+              Hoàn thiện biểu mẫu dưới đây để nhận được các tư vấn về dịch vụ chuyên sâu từ đội ngũ chuyên gia của chúng tôi. Bạn cũng có thể xem thêm thông tin tại phần Dịch vụ. <br> 
+              Liên hệ Hotline: <b>024 3795 3838</b> để hẹn lịch tư vấn trực tiếp.
+            </div>
+          </div>
+          <form action="" class="support-form" id="support-form">
+            <div class="form-group">
+              <label for="name">Họ tên</label>
+              <input
+                type="text"
+                class="input-text"
+                name="name"
+                placeholder="Họ tên"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email liên hệ</label>
+              <input
+                type="email"
+                class="input-text"
+                name="email"
+                placeholder="vidu@email.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Số điện thoại liên hệ</label>
+              <input
+                type="phone"
+                class="input-text"
+                name="phone"
+                placeholder="Tối thiểu 8 chữ số"
+              />
+            </div>
+            <div class="form-group">
+              <label for="company">Tên tổ chức / doanh nghiệp</label>
+              <input
+                type="text"
+                class="input-text"
+                name="company"
+                placeholder="Doanh nghiệp của bạn là?"
+              />
+            </div>
+            <div class="form-group">
+              <label for="fields">Lĩnh vực doanh nghiệp hoạt động</label>
+              <input
+                type="text"
+                class="input-text"
+                name="fields"
+                placeholder="Doanh nghiệp bạn thuộc lĩnh vực nào?"
+              />
+            </div>
+            <div class="form-group">
+              <label>Yêu cầu tư vấn</label>
+              <div class='dropdown'>
+                <div class='input-text title placeholder'>Quý khách cần chúng tôi tư vấn về vấn đề gì?</div>
+                
+                <div class='menu pointerCursor hide'>
+                  <div class='option' id='option1'>Option 1</div>
+                  <div class='option' id='option2'>Option 2</div>
+                  <div class='option' id='option3'>Option 3</div>
+                  <div class='option' id='option4'>Option 4</div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="form-group">
+              <label for="comment">Nội dung cần tư vấn chi tiết</label>
+              <textarea
+                name="comment"
+                class="input-text"
+                cols="30"
+                rows="3"
+                placeholder="Hãy cho chúng tôi có thể giúp gì cho quý khách?"
+              ></textarea>
+            </div>
+            <div class="form-action text-center">
+              <button type="submit" class="btn btn-secondary">
+                ĐĂNG KÝ NHẬN TƯ VẤN
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <include>_footer.html</include>
+  </body>
+  <!--you can put this line anywhere in the site-->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</html>
