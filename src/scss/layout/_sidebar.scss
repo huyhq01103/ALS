@@ -1,5 +1,5 @@
 .navigation {
-    position: sticky;
+    position: fixed;
     z-index: 999;
     top: 20%;
     left: 20px;
@@ -15,9 +15,40 @@
         color: transparent;
         cursor: pointer;
         transition: 0.3s color ease;
-        &.active, &:hover {
+        &.active {
             border-left: 3px solid $secondary;
             color: $text-color;
         }
+        @media (hover: hover) {
+            &:hover {
+                border-left: 3px solid $secondary;
+                color: $text-color;
+            }
+        }
+    }
+    @include xs-screen() {
+        display: none;
+        // top: 0;
+        // left: 0;
+        // max-width: inherit;
+        // padding: 0 10px;
+        // background-color: white;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        // z-index: 99;
+        // .navigation__link {
+        //     border-left: 0;
+        //     border-bottom: 1px solid rgba($color: $text-color, $alpha: 0.2);
+        //     padding: 7px 0;
+        //     color: $text-color;
+        //     margin: 0 5px;
+        //     text-align: center;
+        //     &.active {
+        //         color: $primary;
+        //         border-left: 0;
+        //         border-color: $secondary;
+        //     }
+        // }
     }
 }

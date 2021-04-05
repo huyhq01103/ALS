@@ -5,8 +5,8 @@
     width: percentage(945/1140);
     filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.1));
     @include xs-screen() {
-      width: 100%;
-      margin: -40px auto 0;
+      width: auto;
+      margin: -10px -15px 0;
     }
 }
 .customer-tab {
@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #eee;
+  
   .tab {
     border: none;
     background: transparent;
@@ -45,6 +46,19 @@
     }
     &:focus {
       outline: none;
+    }
+  }
+  @include large-screen() {
+    .tab {
+      margin: 0 5px
+    }
+  }
+  @include xs-screen() {
+    justify-content: flex-start;
+    overflow: scroll;
+    padding-bottom: 20px;
+    .tab {
+      margin: 0 15px
     }
   }
 }
@@ -79,6 +93,12 @@
       white-space: nowrap;
       &::before {
           filter: brightness(0) invert(1);
+          @include xs-screen() {
+            margin-right: 3px !important;
+          }
+          @include tiny-screen() {
+            display: none !important;
+          }
       }
       &.active {
         background: white;
@@ -87,13 +107,16 @@
           filter: none;
        }
       }
-      &:hover {
+      @media (hover: hover) {
+        &:hover {
           background: $secondary;
           color: white;
           &::before {
               filter: brightness(0) invert(1);
           }
+        }
       }
+      
       &:focus {
         outline: none;
       }
@@ -132,13 +155,24 @@
       .btn {
         width: 120px;
         margin-left: 20px;
+        @include xs-screen() {
+          width: 100%;
+        }
       }
     }
   }
   @include xs-screen() {
     .top-tabs {
       .tab {
-        font-size: 10px;
+        padding: 15px 20px;
+        font-size: 0;
+        flex-grow: 1;
+        min-width: 80px;
+        justify-content: center;
+        &.active {
+          font-size: 13px;
+          justify-content: flex-start;
+        }
       }
     }
     .item {

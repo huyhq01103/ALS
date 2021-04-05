@@ -27,15 +27,15 @@
           border: 0;
       }
       &::-webkit-input-placeholder { /* Edge */
-        color: $text-gray;
+        color: $gray;
       }
       
       &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: $text-gray;
+        color: $gray;
       }
       
       &::placeholder {
-        color: $text-gray;
+        color: $gray;
       }
   }
 }

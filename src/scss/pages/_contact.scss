@@ -11,6 +11,9 @@
     margin-top: -10px;
     flex-wrap: wrap;
     justify-content: center;
+    @include xs-screen() {
+        margin: 15px;
+    }
     .g-recaptcha {
         transform:scale(0.67);
         @media #{$xl-viewport} {

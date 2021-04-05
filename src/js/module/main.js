@@ -29,8 +29,7 @@ function toggleShow() {
       : target.parentElement;
   const group = item.dataset.actabGroup;
   const id = item.dataset.actabId;
-  console.log("group" + group);
-  console.log("id" + id);
+
   tabs.forEach(function (tab) {
     if (tab.dataset.actabGroup === group) {
       if (tab.dataset.actabId === id) {
@@ -121,7 +120,7 @@ $("#mainNav .navigation__link").bind("click", function (e) {
   var target = $(this).data("jumb"); // Set the target as variable
   // perform animated scrolling by getting top-position of target-element and set it as scroll target
   window.scroll({
-    top: $("#" + target).offset().top,
+    top: $("#" + target).offset().top + 1,
     behavior: "smooth",
   });
   return false;
@@ -151,13 +150,38 @@ $("#hamburger").bind("click", function (e) {
     state.isOpen = true;
   }
 });
-$("#main-nav .nav-item").bind("click", function (e) {
-  var menu = $(".main-nav");
-  $("#hamburger").removeClass("is-active");
-  $("body").removeClass("overhiden");
-  menu.removeClass("is-active");
-  state.isOpen = false;
-});
+// $(".main-nav .navbar-item ").bind("click", function (e) {
+//   var menu = $(".main-nav");
+//   // $(".main-nav .navbar-item").removeClass('active');
+//   $(this).toggleClass('active');
+//   $("#hamburger").removeClass("is-active");
+//   $("body").removeClass("overhiden");
+//   menu.removeClass("is-active");
+//   state.isOpen = false;
+// });
+// $(".nav-dropdown").on("click", function() {
+//   if ($(this).hasClass("active")) {
+//     $(this).removeClass("active");
+//   } else {
+//     $(".nav-dropdown").removeClass("active");
+//     $(this).addClass("active");
+//   }
+// });
+
+  // handle the expansion of mobile menu drop down nesting
+  $('li.nav-dropdown').click(
+    function(event) {
+        if (event.stopPropagation) {
+            event.stopPropagation();
+        } else {
+            event.cancelBubble = true;
+        }
+
+        if ($('.right-nav').hasClass('is-active')) {
+            $(this).toggleClass('active');
+        }
+    }
+);
 
 $(window)
   .scroll(function () {
@@ -232,6 +256,8 @@ $(".news-slider").slick({
 });
 $(".main-carousel").slick({
   dots: true,
+  dotsClass: 'slick-dots container',
+  autoplay: true,
   infinite: false,
   speed: 300,
 });
@@ -275,10 +301,11 @@ $(".corevalue-slider").slick({
 $(".core-full-slider").slick({
   dots: false,
   arrows: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 5,
   slidesToScroll: 1,
+  autoplay: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -356,4 +383,190 @@ if(dropdownTitle){
 }
 
 dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+
+function animateValue() {
+  const target = $('#countdown');
+  const start = target.data('start');
+  const end = target.data('end');
+  if(target) {
+    if (start === end) return;
+    var range = end - start;
+    var current = start;
+    var increment = end > start? 1 : -1;
+    var stepTime = Math.abs(Math.floor(5000 / range));
+    // var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+        current += increment;
+        target.innerHTML = current;
+        console.log(current);
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+  }
+  
+}
+  
+function registerEventListeners() {
+    var elements = document.querySelectorAll('.purecounter');
+    var intersectionSupported = intersectionListenerSupported();
+
+    if (intersectionSupported) {
+        var intersectionObserver = new IntersectionObserver(animateElements, {
+            "root": null,
+            "rootMargin": '20px',
+            "threshold": 0.5
+        });
+
+        for (var i = 0; i < elements.length; i++) {
+            intersectionObserver.observe(elements[i]);
+        }
+    } else {
+        if (window.addEventListener) {
+            animateLegacy(elements);
+
+            window.addEventListener('scroll', function (e) {
+                animateLegacy(elements);
+            }, { "passive": true });
+        }
+    }
+}
+
+function animateLegacy(elements) {
+    for (var i = 0; i < elements.length; i++) {
+        var config = parseConfig(elements[i]);
+        if (config.legacy === true && elementIsInView(elements[i])) {
+            animateElements([elements[i]]);
+        }
+    }
+}
+
+function animateElements(elements, observer) {
+    elements.forEach(function (element) {
+        var elementConfig = typeof element.target !== "undefined" ? parseConfig(element.target) : parseConfig(element);
+
+        if (elementConfig.duration <= 0) {
+            return element.innerHTML = elementConfig.end.toFixed(elementConfig.decimals);
+        }
+        if ((!observer && !elementIsInView(element)) || (observer && element.intersectionRatio < 0.5)) {
+            return element.target.innerHTML = elementConfig.start > elementConfig.end ? elementConfig.end : elementConfig.start;
+        }
+
+        setTimeout(function () {
+            if (typeof element.target !== "undefined") {
+                return startCounter(element.target, elementConfig);
+            }
+
+            return startCounter(element, elementConfig);
+        }, elementConfig.delay);
+    });
+}
+
+function startCounter(element, config) {
+    var incrementsPerStep = (config.end - config.start) / (config.duration / config.delay);
+    var countMode = 'inc';
+    if (config.start > config.end) {
+        countMode = 'dec';
+        incrementsPerStep *= -1;
+    }
+    if (incrementsPerStep < 1 && config.decimals <= 0) {
+        incrementsPerStep = 1;
+    }
+
+    var currentCount = config.decimals <= 0 ? parseInt(config.start) : parseFloat(config.start).toFixed(config.decimals);
+    element.innerHTML = currentCount;
+
+    if (config.once === true) {
+        element.setAttribute('data-purecounter-duration', 0);
+    }
+
+    var counterWorker = setInterval(function () {
+        var nextNum = nextNumber(currentCount, incrementsPerStep, config, countMode);
+        element.innerHTML = formatNumber(nextNum, config);
+        currentCount = nextNum;
+
+        if ((currentCount >= config.end && countMode == 'inc') || (currentCount <= config.end && countMode == 'dec')) {
+            clearInterval(counterWorker);
+
+            if (currentCount != config.end) {
+                element.innerHTML = config.decimals <= 0 ? parseInt(config.end) : parseFloat(config.end).toFixed(config.decimals);
+            }
+        }
+    }, config.delay);
+}
+
+function parseConfig(element) {
+    var configValues = [].filter.call(element.attributes, function (attribute) {
+        return /^data-purecounter-/.test(attribute.name);
+    });
+
+    var newConfig = {
+        start: 0,
+        end: 9001,
+        duration: 2000,
+        delay: 10,
+        once: true,
+        decimals: 0,
+        legacy: true,
+    };
+
+    for (var i = 0; i < configValues.length; i++) {
+        var valueInd = configValues[i].name.replace('data-purecounter-', '');
+        newConfig[valueInd.toLowerCase()] = valueInd.toLowerCase() == 'duration' ? parseInt(castDataType(configValues[i].value) * 1000) : castDataType(configValues[i].value);
+    }
+
+    return newConfig;
+}
+
+function nextNumber(number, steps, config, mode) {
+    if (!mode) mode = 'inc';
+    if (mode === 'inc') {
+        return config.decimals <= 0 ? parseInt(number) + parseInt(steps) : parseFloat(number) + parseFloat(steps);
+    }
+
+    return config.decimals <= 0 ? parseInt(number) - parseInt(steps) : parseFloat(number) - parseFloat(steps);
+}
+
+function formatNumber(number, config) {
+    return config.decimals <= 0 ? parseInt(number) : number.toLocaleString(undefined, { minimumFractionDigits: config.decimals, maximumFractionDigits: config.decimals });
+}
+
+function castDataType(data) {
+    if (/^[0-9]+\.[0-9]+$/.test(data)) {
+        return parseFloat(data);
+    }
+    if (/^[0-9]+$/.test(data)) {
+        return parseInt(data);
+    }
+    return data;
+}
+
+function elementIsInView(element) {
+    var top = element.offsetTop;
+    var left = element.offsetLeft;
+    var width = element.offsetWidth;
+    var height = element.offsetHeight;
+
+    while (element.offsetParent) {
+        element = element.offsetParent;
+        top += element.offsetTop;
+        left += element.offsetLeft;
+    }
+
+    return (
+        top >= window.pageYOffset &&
+        left >= window.pageXOffset &&
+        (top + height) <= (window.pageYOffset + window.innerHeight) &&
+        (left + width) <= (window.pageXOffset + window.innerWidth)
+    );
+}
+
+function intersectionListenerSupported() {
+    return ('IntersectionObserver' in window) &&
+        ('IntersectionObserverEntry' in window) &&
+        ('intersectionRatio' in window.IntersectionObserverEntry.prototype);
+}
+
+
+    registerEventListeners();
 

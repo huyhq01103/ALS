@@ -38,6 +38,7 @@
         background: white;
         max-height: 0;
         opacity: 0;
+        z-index: -1;
         transition: all 0.4s ease-in-out;
         .option {
             padding: 10px 20px;
@@ -52,6 +53,7 @@
     }
     .opened + .menu {
         opacity: 1;
-        max-height: 500px;     
+        max-height: 500px;
+        z-index: 99;
     }
 }

@@ -17,7 +17,6 @@
 }
 
 
-
 // Define size of media screen
 @mixin tiny-screen() {
   @media only screen and (max-width: 320px) {
@@ -75,7 +74,7 @@
   }
 }
 @mixin laptop_screen() {
-  @media only screen and (max-width: 1450px) {
+  @media only screen and (min-width: 1400px) {
     @content;
   }
 }

@@ -1,5 +1,14 @@
 .wraper-container {
-    margin-top: -293px;
+    margin-top: -30px;
+    @include xs-screen() {
+        margin-top: -30px;
+        section {
+            padding: 30px 0 10px!important;
+        }
+        .tab-content {
+            padding: 20px 0 0;
+        }
+    }
 }
 .blue-box {
     background-color: rgba($color:$blue, $alpha: 0.95);
@@ -7,19 +16,21 @@
     color: white;
     width: percentage(556/1170);
     position: absolute;
-    right: 15px;
-    bottom: 100%;
+    bottom: -30px;
     border-radius: 5px;
-    margin-bottom: -30px;
-    h3 {margin-bottom: 20px;}
+    h3 {
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
     p:last-child {
         margin-bottom: 0;
     }
     @include xs-screen() {
-        min-width: 100%;
-        width: auto;
-        margin: 0 -15px;
+        padding: 30px;
         position: static;
+        z-index: 9;
+        margin: -100px -5px 0;
+        width: auto;
     }
 }
 .full--banner {
@@ -28,8 +39,58 @@
     @include xs-screen() {
         padding: 30px 0 0;
     }
-    img {
-        width: 100%;
+}
+.parallax {
+    display: block;
+    background-image: url("../images/parallax/about-full.jpg");
+    height: 100%;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.airport {
+        background-image: url("../images/parallax/airport-full.jpg");
+    }
+    &.dvc {
+        background-image: url("../images/parallax/dvc.jpg");
+        min-height: 400px;
+    }
+    &.about {
+        background-image: url("../images/parallax/aboutus.jpg");
+        min-height: 400px;
+        @include xs-screen() {
+            background-image: url("../images/parallax/aboutus-mb.jpg");
+        }
+    }
+    &.csr {
+        background-image: url("../images/parallax/csr.jpg");
+        min-height: 400px;
+    }
+    &.newsdetail {
+        background-image: url("../images/parallax/preview.jpg");
+        min-height: 400px;
+    }
+    &.search-banner {
+        background-image: url("../images/parallax/search-banner.jpg");
+        min-height: 400px;
+    }
+    &.plx-contact {
+        background-image: url("../images/parallax/contact-banner.jpg");
+        min-height: 300px;
+    }
+    &.plx-support {
+        background-image: url("../images/parallax/support.jpg");
+        min-height: 300px;
+    }
+    &.about-block {
+        background-image: url("../images/parallax/about-block.jpg");
+        @include xs-screen() {
+            background-image: url("../images/parallax/about-block-mb.jpg");
+        }
+    }
+    @include xs-screen() {
+        min-height: 400px;
     }
 }
 .page-section {
@@ -65,9 +126,30 @@
         min-height: 100px;
         font-weight: 600;
         transition: all 0.3s ease;
+        position: relative;
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            transform: translate(50%,50%);
+            background: url('../images/frame.png') no-repeat center center;
+            width: 103px;
+            height: 27px;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
         &:hover {
-            background: $secondary url('../images/frame.png') no-repeat 95% 90%;
+            background-color: $secondary;
             color: white;
+            &::after{
+                content:"";
+                opacity: 1;
+                right: 10px;
+                bottom: 10px;
+                transform: none;
+            }
         }
     }
 }
@@ -104,7 +186,7 @@
     list-style: none;
     padding: 0;
     li {
-        background: url('../images/check.png') no-repeat left center;
+        background: url('../images/check.svg') no-repeat left center;
         padding-left: 35px;
         color: white;
         line-height: 260%;
@@ -113,6 +195,9 @@
 .prizes-list {
     margin: -10px auto 0;
     width: 77.4%;
+    @include xs-screen() {
+        width: 100%;
+    }
 }
 .prize-item {
     display: flex;
@@ -128,10 +213,12 @@
         font-size: 11px;
         line-height: 140%;
         background: url('../images/ic_download.svg') no-repeat 35px center;
-        filter: grayscale(100%);   
+        filter: grayscale(100%);
+        color: $gray;
     }
-    &.active {
+    &.active , &:hover{
         border-bottom: 1px solid $secondary;
+        color: black;
         .file {
             color: $secondary;
             filter: grayscale(0%);
@@ -148,6 +235,9 @@
 #about {
     .text-gray {
         padding: 30px 0 0 56px;
+        @include xs-screen() {
+            padding: 30px 15px;
+        }
     }
 }
 #advantages {

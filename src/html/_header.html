@@ -1,6 +1,13 @@
 <header>
     <div class="container d-flex align-items-center">
         <div class="nav-brand">
+            <div class="search-nav">
+                <div class="btn-search toggle"><img src="assets/images/ic_search.svg" alt="search"></div>
+                <div class="search-content">
+                    <input type="text" placeholder="Tìm kiếm ...">
+                    <button class="search-submit"><img src="assets/images/ic_search_blue.png" alt="search"></button>
+                </div>
+            </div>
             <h1 class="logo"><a href="/"><img src="assets/images/logo.png" alt="ALS">ALS</a></h1>
             <div id="hamburger" class="navbar-burger burger">
                 <span aria-hidden="true"></span>
@@ -11,11 +18,37 @@
         <div class="nav-overlay"></div>
         <div class="right-nav">
             <ul class="main-nav">
-                <li class="navbar-item"><a href="service.html">Dịch vụ</a></li>
-                <li class="navbar-item"><a href="about.html">Về ALS</a></li>
+                <li class="navbar-item nav-dropdown">
+                    <a href="service.html">Dịch vụ</a>
+                    <ul class="submenu">
+                        <li class="nav-dropdown">
+                            <a href="terminal.html">ALS Cargo</a>
+                            <ul class="submenu lv2">
+                                <li><a href="terminal.html">Kho ngoại quan</a></li>
+                                <li><a href="warehouse.html">Kho tài liệu</a></li>
+                                <li><a href="transportion_terminal.html">Kho lạnh</a></li>
+                                <li><a href="ecommerce_terminal.html">Kho thường</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="warehouse.html">ALS Warehouse</a>
+                            <ul class="submenu lv2">
+                                <li><a href="terminal.html">Kho ngoại quan</a></li>
+                                <li><a href="warehouse.html">Kho tài liệu</a></li>
+                                <li><a href="transportion_terminal.html">Kho lạnh</a></li>
+                                <li><a href="ecommerce_terminal.html">Kho thường</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="transportion_terminal.html">ALS Transportion</a></li>
+                        <li><a href="ecommerce_terminal.html">ALS Solution</a></li>
+                        <li><a href="transportion_terminal.html">ALS Training</a></li>
+                        <li><a href="value_terminal.html">ALS Value</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item"><a href="aboutus.html">Về ALS</a></li>
                 <li class="navbar-item"><a href="customer.html">Khách hàng</a></li>
                 <li class="navbar-item"><a href="news.html">Tin tức</a></li>
-                <li class="navbar-item"><a href="contacts.html">Liên hệ</a></li>
+                <li class="navbar-item"><a href="contact.html">Liên hệ</a></li>
             </ul>
             <div class="hotline">
                 <p>Hotline</p>
@@ -27,7 +60,7 @@
             </div>
             <div class="group-icon">
                 <div class="search-nav">
-                    <div class="btn-search toggle"><img src="assets/images/ic_search.png" alt="search"></div>
+                    <div class="btn-search toggle"><img src="assets/images/ic_search.svg" alt="search"></div>
                     <div class="search-content">
                         <input type="text" placeholder="Tìm kiếm ...">
                         <button class="search-submit"><img src="assets/images/ic_search_blue.png" alt="search"></button>

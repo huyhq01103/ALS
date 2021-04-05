@@ -316,6 +316,10 @@ sub {
 img {
   border: 0;
   max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  overflow: hidden;
   @if $legacy_browser_support {
     *-ms-interpolation-mode: bicubic; /* 2 */
   }
