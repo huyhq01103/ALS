@@ -31,3 +31,64 @@
         margin-right: 10px;
     }
 }
+
+.parallax {
+    display: block;
+    
+    height: 100%;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include xs-screen() {
+        min-height: 400px;
+    }
+    &.plx-terminal {
+        background-image: url("../images/parallax/about-full.jpg");
+        @include xs-screen() {
+            background-image: url("../images/parallax/about-full-mb.jpg");
+        }
+    }
+    &.airport {
+        background-image: url("../images/parallax/airport-full.jpg");
+    }
+    &.dvc {
+        background-image: url("../images/parallax/dvc.jpg");
+    }
+    &.about {
+        background-image: url("../images/parallax/aboutus.jpg");
+        @include xs-screen() {
+            background-image: url("../images/parallax/aboutus-mb.jpg");
+        }
+    }
+    &.csr {
+        background-image: url("../images/parallax/csr.jpg");
+    }
+    &.newsdetail {
+        background-image: url("../images/parallax/preview.jpg");
+    }
+    &.search-banner {
+        background-image: url("../images/parallax/search-banner.jpg");
+    }
+    &.plx-contact {
+        background-image: url("../images/parallax/contact-banner.jpg");
+        min-height: 300px;
+    }
+    &.plx-support {
+        background-image: url("../images/parallax/support.jpg");
+        min-height: 300px;
+    }
+    &.about-block {
+        background-image: url("../images/parallax/about-block.jpg");
+        @include xs-screen() {
+            background-image: url("../images/parallax/about-block-mb.jpg");
+        }
+    }
+    
+}
+.hide-xs {
+    @include xs-screen() {
+        display: none !important;
+    }
+}

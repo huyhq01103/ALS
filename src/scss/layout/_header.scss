@@ -87,7 +87,7 @@ header {
       // background-color: $blue;
       color: white;
       border-radius: 50%;
-      padding: 9px 11px;
+      padding: 9px 10px;
       cursor: pointer;
       img {
         max-width: 100%;
@@ -444,15 +444,17 @@ header {
           display: block;
           width: 30px;
           height: 30px;
-          background: url('../images/arrow-up.svg') no-repeat center center;
-          transform: rotate(90deg);
-          border: 1px solid $gray;
+          background: url('../images/arrow.svg') no-repeat center center;
+          transform: rotate(0);
+          background-color: $primary;
           border-radius: 10px;
           transition: all 0.4s ease-in-out;
+          background-size: 6px;
+          border: 1px solid transparent;
         }
         &.active {
           &::after {
-            transform: rotate(180deg);
+            transform: rotate(90deg);
           }
           & > .submenu {
             opacity: 1;
@@ -468,7 +470,6 @@ header {
             }
             .nav-dropdown::after {
               border-color: white;
-              filter: brightness(0) invert(1);
             }
             &.lv2 {
               margin-top: 0;

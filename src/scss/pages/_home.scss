@@ -168,9 +168,9 @@
     color: $blue;
     margin: 5px 0 20px;
     line-height: 37px;
-    @include xs-screen() {
-      font-size: 20px;
-    }
+    // @include xs-screen() {
+    //   font-size: 20px;
+    // }
   }
   .title-spacing {
     letter-spacing: 0.65rem;
@@ -552,6 +552,12 @@ section.support {
   color: white;
   @include xs-screen() {
     text-align: center;
+    background: url('../images/banner/support-mb.jpg') no-repeat center center;
+    padding: 60px 0 !important;
+    h2 {
+      font-size: 40px;
+      padding: 0 10%;
+    }
     .justify-content-end {
       margin-top: 15px;
       justify-content: center !important;

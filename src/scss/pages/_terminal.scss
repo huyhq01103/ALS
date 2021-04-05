@@ -1,9 +1,9 @@
 .wraper-container {
     margin-top: -30px;
     @include xs-screen() {
-        margin-top: -30px;
+        margin-top: 0;
         section {
-            padding: 30px 0 10px!important;
+            padding: 30px 0;
         }
         .tab-content {
             padding: 20px 0 0;
@@ -40,62 +40,9 @@
         padding: 30px 0 0;
     }
 }
-.parallax {
-    display: block;
-    background-image: url("../images/parallax/about-full.jpg");
-    height: 100%;
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    &.airport {
-        background-image: url("../images/parallax/airport-full.jpg");
-    }
-    &.dvc {
-        background-image: url("../images/parallax/dvc.jpg");
-        min-height: 400px;
-    }
-    &.about {
-        background-image: url("../images/parallax/aboutus.jpg");
-        min-height: 400px;
-        @include xs-screen() {
-            background-image: url("../images/parallax/aboutus-mb.jpg");
-        }
-    }
-    &.csr {
-        background-image: url("../images/parallax/csr.jpg");
-        min-height: 400px;
-    }
-    &.newsdetail {
-        background-image: url("../images/parallax/preview.jpg");
-        min-height: 400px;
-    }
-    &.search-banner {
-        background-image: url("../images/parallax/search-banner.jpg");
-        min-height: 400px;
-    }
-    &.plx-contact {
-        background-image: url("../images/parallax/contact-banner.jpg");
-        min-height: 300px;
-    }
-    &.plx-support {
-        background-image: url("../images/parallax/support.jpg");
-        min-height: 300px;
-    }
-    &.about-block {
-        background-image: url("../images/parallax/about-block.jpg");
-        @include xs-screen() {
-            background-image: url("../images/parallax/about-block-mb.jpg");
-        }
-    }
-    @include xs-screen() {
-        min-height: 400px;
-    }
-}
+
 .page-section {
     padding: 30px 0 0;
-    // overflow: hidden;
 }
 .grid-box {
     display: grid;
@@ -175,8 +122,8 @@
         
     }
     @include xs-screen() {
-        border-radius: 5px;
-        margin-top: 15px;
+        margin: 15px -15px 0 15px;
+        padding: 20px 30px 20px 20px;
         &::after {
             display: none;
         }
@@ -186,7 +133,7 @@
     list-style: none;
     padding: 0;
     li {
-        background: url('../images/check.svg') no-repeat left center;
+        background: url('../images/check.svg') no-repeat left 9px;
         padding-left: 35px;
         color: white;
         line-height: 260%;
