@@ -56,7 +56,6 @@
   @include xs-screen() {
     justify-content: flex-start;
     overflow: scroll;
-    padding-bottom: 20px;
     .tab {
       margin: 0 15px
     }

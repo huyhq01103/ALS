@@ -168,9 +168,9 @@
     color: $blue;
     margin: 5px 0 20px;
     line-height: 37px;
-    // @include xs-screen() {
-    //   font-size: 20px;
-    // }
+    @include xs-screen() {
+      font-size: 25px;
+    }
   }
   .title-spacing {
     letter-spacing: 0.65rem;
@@ -476,6 +476,11 @@ section.news {
       background-color: #006B99;
     }
   }
+  .visible-xs a {
+    color: white;
+    margin-top: 30px;
+    display: inline-block;
+  }
   .top-news {
     display: flex;
     justify-content: space-between;
@@ -520,19 +525,27 @@ section.news {
       display: inline-block;
       border-bottom: 1px solid transparent;
       transition: all 0.3s ease;
+      position: relative;
       &::after {
         content: '';
-        background:  url('../images/arrow-xs.svg') no-repeat center center;
-        filter: brightness(0) invert(1);
-        width: 4px;
+        position: absolute;
+        left: 100%;
+        bottom: 4px;
+        width: 8px;
         height: 8px;
-        background-size: cover;
         transform: rotate(180deg);
         display: inline-block;
         margin-left: 10px;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        transform: rotate(135deg);
       }
       &:hover {
-        border-color: white;
+        color: $secondary;
+        border-color: $secondary;
+        &::after {
+          border-color: $secondary;
+        }
       }
     }
     &:hover {

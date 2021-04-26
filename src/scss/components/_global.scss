@@ -92,3 +92,8 @@
         display: none !important;
     }
 }
+.visible-xs {
+    @include tablet() {
+        display: none !important;
+    }
+}

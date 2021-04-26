@@ -90,8 +90,8 @@
     border-bottom: 1px solid $text-color;
     transition: all 0.3s ease;
     &:hover {
-        color: $primary;
-        border-color: $primary;
+        color: $secondary;
+        border-color: $secondary;
     }
     @include xs-screen() {
         margin: 0 0 15px;
