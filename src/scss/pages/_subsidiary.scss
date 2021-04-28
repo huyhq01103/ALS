@@ -19,7 +19,7 @@
         height: 90px;
         font-weight: 600;
         min-width: 80px;
-        cursor: pointer;
+        
         &::before, &::after {
             content: '';
             display: block;
@@ -45,13 +45,37 @@
                 display: none;
             }
         }
+        .timeline-wrap {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            height: 90px;
+            font-weight: 600;
+            min-width: 80px;
+            cursor: pointer;
+            transform: translate(44%, 0);
+            z-index: 99;
+            &.active {
+                .timeline-name {
+                    background: $primary;
+                    color: white;
+                    &::after {
+                        content: '';
+                        border-color: $primary transparent transparent transparent;
+                    }
+                }
+            }
+        }
         .timeline-name {
             padding: 7px 11px;
             border-radius: 10px;
             display: inline-block;
             position: absolute;
             top: 0;
-            transform: translate(42%, 0);
+            
             white-space: nowrap;
             transition: all 0.4s ease-in-out;
             &::after {
@@ -65,27 +89,15 @@
                 border-style: solid;
                 border-color: transparent transparent transparent transparent;
             }
-            &.long-text {
-                margin-right: -7px;
-            }
         }
         .timeline-year {
             display: block;
             position: absolute;
             bottom: 0;
-            transform: translate(43%, 0);
+            // transform: translate(43%, 0);
             transition: all 0.4s ease-in-out;
         }
-        &.active {
-            .timeline-name {
-                background: $primary;
-                color: white;
-                &::after {
-                    content: '';
-                    border-color: $primary transparent transparent transparent;
-                }
-            }
-        }
+        
     }
     
     .timeline-item.active ~ .timeline-item {
@@ -112,6 +124,7 @@
     }
     .maxi {
         transition: all 0.4s ease-in-out;
+        width: 100%;
     }
     .mini {
         display: flex;

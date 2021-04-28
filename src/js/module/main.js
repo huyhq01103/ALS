@@ -2,7 +2,7 @@ import $ from "jquery";
 import "slick-carousel";
 /* eslint-disable */
 const tabItem = document.querySelectorAll(".item, .sub-item");
-const tabs = document.querySelectorAll(".tab, .timeline-item");
+const tabs = document.querySelectorAll(".tab");
 const btnModal = document.querySelectorAll(".guide, .btn-close");
 const modal = document.querySelector(".overlay");
 const body = document.querySelector("body");
@@ -24,7 +24,7 @@ toggle.forEach(function (item) {
 function toggleShow() {
   const target = this;
   const item =
-    target.classList.contains("tab") || target.classList.contains("timeline-item")
+    target.classList.contains("tab")
       ? target
       : target.parentElement;
   const group = item.dataset.actabGroup;
@@ -264,7 +264,7 @@ $(".main-carousel").slick({
 
 $(".corevalue-slider").slick({
   dots: false,
-  arrows: false,
+  // arrows: false,
   infinite: false,
   speed: 300,
   slidesToShow: 4,
@@ -326,18 +326,19 @@ $(".core-full-slider").slick({
 
 $(".mini .mini-img").click(function () {
   var currentImage =  $(".maxi");
+  var imgsrc = jQuery(this)[0].children[0].currentSrc;
   currentImage.addClass('fadeIn');
 	setTimeout(function () {
 		currentImage.removeClass('fadeIn');
 	}, 500);
-  currentImage.attr("src", $(this).attr("src"));
+  currentImage.attr('src', imgsrc);
 });
 
-// TIME LINE 
-$('.timeline-item').click(function(){
-  $('.timeline-item').removeClass("active");
-  $(this).addClass("active");
-});
+// // TIME LINE 
+// $('.timeline-wrap').click(function(){
+//   $('.timeline-wrap').removeClass("active");
+//   $(this).addClass("active");
+// });
 
 // DROPDOWN
 

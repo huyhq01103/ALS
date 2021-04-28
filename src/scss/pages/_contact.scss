@@ -8,21 +8,32 @@
 .form-action {
     display: flex;
     align-items: center;
-    margin-top: -10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    @include xs-screen() {
-        margin: 15px;
-    }
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
     .g-recaptcha {
         transform:scale(0.67);
-        @media #{$xl-viewport} {
-            width: 63%;
-            margin-left: -40px;
+        transform-origin:0 0;
+        height: 50px;
+        width: 63%;
+        margin-right: -20%;
+        // @media #{$xl-viewport} {
+            
+        // }
+    }
+    @include xs-screen() {
+        justify-content: center;
+        margin: 15px;
+        flex-wrap: wrap;
+        .g-recaptcha {
+            margin: 15px auto;
+            transform-origin: 50% 0;
+            width: auto;
         }
     }
 }
 .text-note {
+    margin-top: 16px;
     font-size: 11px;
     font-weight: 500;
     color: $gray;

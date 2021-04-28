@@ -8,17 +8,18 @@ $sm-min: 510px;
 $md-min: 690px;
 $lg-min: 930px;
 $xl-min: 1140px;
-
+$xxl-min: 1320px;
 $container-sm: $sm-min + $gutter-width;
 $container-md: $md-min + $gutter-width;
 $container-lg: $lg-min + $gutter-width;
 $container-xl: $xl-min + $gutter-width;
+$container-xxl: $xxl-min + $gutter-width;
 
 $sm-viewport: "only screen and (min-width: 576px)";
 $md-viewport: "only screen and (min-width: 768px)";
 $lg-viewport: "only screen and (min-width: 992px)";
 $xl-viewport: "only screen and (min-width: 1200px)";
-
+$xxl-viewport: "only screen and (min-width: 1560px)";
 
 .container-fluid, .container {
   margin-right: auto;
@@ -1018,5 +1019,10 @@ $xl-viewport: "only screen and (min-width: 1200px)";
 
   .last-xl {
     order: 1;
+  }
+}
+@media #{$xxl-viewport} {
+  .container {
+    max-width: $container-xxl;
   }
 }

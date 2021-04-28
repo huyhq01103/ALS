@@ -286,7 +286,7 @@ header {
             transition: color 0.4s ease-in-out;
           }
         }
-        & > span {
+        & > a {
           position: relative;
           &::after {
             content: "";
@@ -302,10 +302,11 @@ header {
         }
         &:hover > a::after {
           content: "";
-          background: $secondary;
+          background-color: $secondary;
           width: 100%;
         }
       }
+
       li:hover > ul.submenu,
       li.active > ul.submenu {
         top: 100%;
@@ -316,7 +317,7 @@ header {
       }
       ul.submenu {
         position: absolute;
-        padding: 20px 30px;
+        padding: 20px 0px;
         left: 0;
         top: 100%;
         text-align: left;
@@ -334,9 +335,18 @@ header {
         & > li {
           list-style: none;
           white-space: nowrap;
-          margin-bottom: 10px;
+          padding: 5px 20px;
           &:last-child {
             margin-bottom: 0;
+          }
+          &:hover {
+            background-color: $primary;
+            a {
+              color: white;
+              &::after {
+                border-color: white;
+              }
+            }
           }
           &:hover > ul.submenu.lv2 {
             left: 100%;
@@ -364,6 +374,32 @@ header {
             &:hover,
             .active {
               opacity: 1;
+            }
+          }
+        }
+        .nav-dropdown {
+          &> a {
+            position: relative;
+            display: block;
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 9px;
+              left: 100%;
+              transform: translate3d(0, -15%, 0) rotate(45deg);
+              text-align: center;
+              cursor: pointer;
+              padding: 0;
+              z-index: 1;
+              height: 6px;
+              width: 6px;
+              overflow: hidden;
+              background: transparent;
+              border: 0;
+              border-top: 1px solid #303F49;
+              border-right: 1px solid #303F49;
+              transition: all 200ms ease;
             }
           }
         }

@@ -5,8 +5,9 @@
   border-radius: 88px;
   padding: 10px 20px;
   margin: 0 10px 0 0;
-  width: percentage(225/885);
+  width: percentage(225/1080);
   line-height: 20px;
+  overflow: hidden;
   &:first-child {
       flex-grow: 1;
   }
