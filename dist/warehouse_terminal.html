@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ALS Homepage</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0" nonce="xMkB02Rh"></script>
+    <!--you can put this line anywhere in the site-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link href="./assets/css/styles.css" rel="stylesheet"></head>
+<body>
+  <header>
+    <div class="container d-flex align-items-center">
+        <div class="nav-brand">
+            <div class="search-nav">
+                <div class="btn-search toggle"><img src="assets/images/ic_search.svg" alt="search"></div>
+                <div class="search-content">
+                    <input type="text" placeholder="Tìm kiếm ...">
+                    <button class="search-submit"><img src="assets/images/ic_search_blue.png" alt="search"></button>
+                </div>
+            </div>
+            <h1 class="logo"><a href="/"><img src="assets/images/logo.png" alt="ALS">ALS</a></h1>
+            <div id="hamburger" class="navbar-burger burger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="nav-overlay"></div>
+        <div class="right-nav">
+            <ul class="main-nav">
+                <li class="navbar-item nav-dropdown">
+                    <a href="service.html">Dịch vụ</a>
+                    <ul class="submenu">
+                        <li class="nav-dropdown">
+                            <a href="terminal.html">ALS Cargo</a>
+                            <ul class="submenu lv2">
+                                <li><a href="terminal.html">Kho ngoại quan</a></li>
+                                <li><a href="warehouse.html">Kho tài liệu</a></li>
+                                <li><a href="transportion_terminal.html">Kho lạnh</a></li>
+                                <li><a href="ecommerce_terminal.html">Kho thường</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-dropdown">
+                            <a href="warehouse.html">ALS Warehouse</a>
+                            <ul class="submenu lv2">
+                                <li><a href="terminal.html">Kho ngoại quan</a></li>
+                                <li><a href="warehouse.html">Kho tài liệu</a></li>
+                                <li><a href="transportion_terminal.html">Kho lạnh</a></li>
+                                <li><a href="ecommerce_terminal.html">Kho thường</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="transportion_terminal.html">ALS Transportion</a></li>
+                        <li><a href="ecommerce_terminal.html">ALS Solution</a></li>
+                        <li><a href="transportion_terminal.html">ALS Training</a></li>
+                        <li><a href="value_terminal.html">ALS Value</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-item"><a href="aboutus.html">Về ALS</a></li>
+                <li class="navbar-item"><a href="customer.html">Khách hàng</a></li>
+                <li class="navbar-item"><a href="news.html">Tin tức</a></li>
+                <li class="navbar-item"><a href="contact.html">Liên hệ</a></li>
+            </ul>
+            <div class="hotline">
+                <p>Hotline</p>
+                <span>+84 24 3795 3838</span>
+            </div>
+            <div class="action-box">
+                <a href="#">Nhận tư vấn</a>
+                <a href="#">Tra cứu</a>
+            </div>
+            <div class="group-icon">
+                <div class="search-nav">
+                    <div class="btn-search toggle"><img src="assets/images/ic_search.svg" alt="search"></div>
+                    <div class="search-content">
+                        <input type="text" placeholder="Tìm kiếm ...">
+                        <button class="search-submit"><img src="assets/images/ic_search_blue.png" alt="search"></button>
+                    </div>
+                </div>
+                <div class="ico-user"></div>
+                
+                <div class="language">
+                    <div class="btn-lang vi">
+                        <span class="country">VN</span>
+                    </div>
+                    <div class="lang-nav collapse" id="langModal">
+                        <div class="flag" data-flag="vi">Tiếng Việt</div>
+                        <div class="flag" data-flag="en">English</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</header>
+    <div class="wraper">
+        <!-- STICKY NAV  -->
+        <div class="navigation" id="mainNav">
+          <div><span class="navigation__link active" data-jumb="about">Giới thiệu</span></div>
+          <div><span class="navigation__link" data-jumb="advantages">Ưu điểm nổi bật</span></div>
+          <div><span class="navigation__link" data-jumb="procedure">Quy trình khai thác</span></div>
+          <div><span class="navigation__link" data-jumb="certificate">Chứng chỉ</span></div>
+          <div><span class="navigation__link" data-jumb="location">Địa điểm</span></div>
+          <div><span class="navigation__link" data-jumb="related">Liên quan</span></div>
+        </div>
+        <div class="wraper-container">
+          <section id="about" class="page-section">
+            <div class="container">
+              <div class="top-block-lg"></div>
+              <div class="row">
+                <div class="col-md-7">
+                  <img src="assets/images/terminal/warehouse.jpg" alt="ALS CARGO TERMINAL">
+                </div>
+                <div class="col-md-5 text-gray">
+                  <h3 class="title-primary">Hệ thống kho ngoại quan</h3>
+                  <p>Với kinh nghiệm nhiều năm trong lĩnh vực khai báo hải quan cùng sự hỗ trợ trực tiếp của phòng hải quan tại các đơn vị địa phương, hệ thống kho ngoại quan của ALS sẽ là lựa chọn đảm bảo và tiện lợi cho các tổ chức/doanh nghiệp/cá nhân có nhu cầu sử dụng kho ngoại quan hàng hoá.</p>
+                  <p><b>ALS – Kho ngoại quan diện tích lớn, kiểm soát chặt chẽ </b><br> Tổng diện tích khai thác lên đến 15.000 m2, hệ thống cơ sở vật chất đạt tiêu chuẩn quốc tế. An ninh kép 2 chiều, kiểm soát 24/7, phần mềm quản lý tự động hoá.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="advantages" class="page-section">
+            <div class="container">
+              <div class="top-block-lg">
+                <div class="semi">Những lợi thế vượt trội</div>
+                <h3 class="title">Kho ngoại quan ALS</h3>
+                
+              </div>
+              <div class="grid-box">
+                <div class="grid-item">
+                  Hệ thống kho ngoại quan của ALS được đặt tại các vị trí thuận tiện, dễ di chuyển, tiếp nhận hay làm các thủ tục liên quan đến hàng hoá xuất nhập khẩu.
+                </div>
+                <div class="grid-item">
+                  Khả năng hỗ trợ, tư vấn giải quyết các các thủ tục kho ngoại quan cho khách hàng dựa trên sự am hiểu về các quy định, luật định cùng mối quan hệ tốt với cơ quan liên quan.
+                </div>
+                <div class="grid-item">
+                  Các dịch vụ hậu cần hỗ trợ kèm theo bao gồm: phân loại hàng hoá, đóng gói, dán nhãn, kiểm đếm, phân phối, …
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <section id="procedure" class="page-section">
+            <div class="container">
+              <div class="top-block-lg">
+                <h3 class="title">Quy trình quản lý kho ngoại quan</h3>
+              </div>
+              <div class="procedure-tabs">
+                <!-- <div class="tabs top-tabs">
+                  <button class="tab active" data-actab-group="1" data-actab-id="0">Quy trình hàng xuất</button>
+                  <button class="tab" data-actab-group="1" data-actab-id="1">Quy trình hàng nhập</button>
+                </div> -->
+                <div class="tab-content">
+                  <div class="item active text-center" data-actab-group="1" data-actab-id="0">
+                    <img src="assets/images/proceduce/Cargo_Terminal.jpg" alt="Quy trình hàng xuất">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <section id="certificate" class="page-section">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3 class="title-block">Chứng nhận</h3>
+                    <div class="text-gray">
+                      Với nền móng dịch vụ được xây dựng vững chãi, nhà ga hàng hóa ALS bảo đảm đáp ứng đầy đủ các điều kiện kinh doanh và phục vụ hàng hóa hàng không tiêu chuẩn quốc tế được công nhận bởi các tổ chức trong nước và quốc tế như IATA, ISO, TAPA,…
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="certificate-box">
+                      <ul class="list-check">
+                        <li>Giấy phép hoạt động kho hải quan</li>
+                        <li>Giấy phép xác nhận phòng cháy chữa cháy</li>
+                        <li>ISO 9001:2015 Certification</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+  
+          <section id="location" class="page-section">
+            <div class="container">
+              <div class="top-block-lg">
+                <h3 class="title">Hệ thống sẵn sàng cung ứng Kho hải quan</h3>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4944656404136!2d105.80683361546964!3d21.212232286864122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135023c4e4b6b97%3A0x71cc5b8b5d89b71f!2sALS%20Cargo%20Terminal!5e0!3m2!1sen!2s!4v1615130935399!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+            </div>
+          </section>
+  
+          <section id="related" class="page-section pb-5">
+            <div class="container">
+              <div class="top-block-lg">
+                <h3 class="title">Các dịch vụ liên quan</h3>
+              </div>
+              <div class="block-carousel">
+                <div class="carousel-item">
+                  <img src="assets/images/service/service1.jpg" alt="" />
+                  <div class="carousel-item-content">
+                    <h4>ALS WareHouse</h4>
+                    <div>
+                      ALS sở hữu hệ thống kho lớn với tổng diện tích lên tới xm2. Đa
+                      dạng loại hình kho phục vụ đáp ứng ...
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/service/service2.jpg" alt="" />
+                  <div class="carousel-item-content">
+                    <h4>ALS WareHouse</h4>
+                    <div>
+                      ALS sở hữu hệ thống kho lớn với tổng diện tích lên tới xm2. Đa
+                      dạng loại hình kho phục vụ đáp ứng ...
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/service/service3.jpg" alt="" />
+                  <div class="carousel-item-content">
+                    <h4>ALS WareHouse</h4>
+                    <div>
+                      ALS sở hữu hệ thống kho lớn với tổng diện tích lên tới xm2. Đa
+                      dạng loại hình kho phục vụ đáp ứng ...
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/service/service1.jpg" alt="" />
+                  <div class="carousel-item-content">
+                    <h4>ALS WareHouse</h4>
+                    <div>
+                      ALS sở hữu hệ thống kho lớn với tổng diện tích lên tới xm2. Đa
+                      dạng loại hình kho phục vụ đáp ứng ...
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/images/service/service2.jpg" alt="" />
+                  <div class="carousel-item-content">
+                    <h4>ALS WareHouse</h4>
+                    <div>
+                      ALS sở hữu hệ thống kho lớn với tổng diện tích lên tới xm2. Đa
+                      dạng loại hình kho phục vụ đáp ứng ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="support">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Nhận hỗ trợ & tư vấn</h2>
+        Đặt lịch hẹn tư vấn cùng với chuyên gia của ALS
+      </div>
+      <div class="col-md-6 align-items-center d-flex justify-content-end">
+        <button class="btn btn-white btn-lg">NHẬN TƯ VẤN TỪ CHUYÊN GIA</button>
+      </div>
+    </div>
+  </div>
+</section>
+        </div>
+    </div>
+    <footer>
+  <div class="container">
+    <div class="footer-wrapper">
+      <div class="scroll-top">Jump to top of page</div>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="footer-logo" src="assets/images/logo.png" alt="ALS" />
+          <div class="company-info">
+            <div class="semi text-secondary">
+              CÔNG TY CỔ PHẦN LOGISTICS HÀNG KHÔNG
+            </div>
+            <div class="footer-item d-flex">
+              <img src="assets/images/footer/location.svg" alt="location" />
+              Tầng 4, Ga hàng hóa ALS, Cảng hàng không Quốc Tế Nội Bài, xã Phú
+              Minh, huyện Sóc Sơn, TP Hà Nội
+            </div>
+            <div class="footer-item d-flex">
+              <img src="assets/images/footer/phone.svg" alt="phone" />
+              +84 24 3795 3838
+            </div>
+            <div class="footer-item d-flex">
+              <img src="assets/images/footer/email.svg" alt="email" />
+              contact@als.com.vn
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="top-footer d-flex">
+            <div class="top-footer-label">
+              <div class="semi text-secondary">ĐĂNG KÝ NHẬN BẢN TIN TỪ ALS</div>
+              <div>Giữ cập nhật về chính sách, thông tin mới nhất.</div>
+            </div>
+            <div class="dky flex-grow-1">
+              <input type="text" placeholder="Nhập email của bạn vào đây ...">
+              <button class="btn">ĐĂNG KÝ</button>
+            </div>
+          </div>
+          
+          <div class="d-flex justify-content-between footer-navs">
+            <div class="footer-nav">
+              <div class="footer-nav-title">
+                VỀ ALS
+              </div>
+              <div class="d-flex flex-column">
+                <a href="aboutus.html">Giới thiệu công ty</a>
+                <a href="subsidiary.html">Công ty thành viên</a>
+                <a href="csr.html">Hoạt động CSR</a>
+                <a href="contact.html">Liên hệ</a>
+              </div>
+            </div>
+            <div class="footer-nav">
+              <div class="footer-nav-title">
+                DỊCH VỤ
+              </div>
+              <div class="d-flex flex-column">
+                <a href="terminal.html">ALS Cargo Terminal</a>
+                <a href="airport_terminal.html">ALS Off Airport Terminal</a>
+                <a href="warehouse.html">ALS Warehouse</a>
+                <a href="transportion.html">ALS Trucking</a>
+                <a href="ecommerce_terminal.html">ALS Ecommerce</a>
+                <a href="training.html">ALS Trainning</a>
+                <a href="values.html">ALS Value Added</a>
+              </div>
+            </div>
+            <div class="footer-nav">
+              <div class="footer-nav-title">
+                TIN TỨC
+              </div>
+              <div class="d-flex flex-column">
+                <a href="news.html">Nội bộ doanh nghiệp</a>
+                <a href="news.html">Truyền thông</a>
+                <a href="news.html">Tuyển dụng</a>
+              </div>
+            </div>
+            <div class="footer-nav">
+              <div class="footer-nav-title">
+                Hỗ trợ
+              </div>
+              <div class="d-flex flex-column">
+                <a href="search-vd.html">Tra cứu đơn hàng</a>
+                <a href="customer-support.html">Tư vấn giải pháp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex">
+        <div class="copyright">© 2021 als.com.vn some rights reserved.</div>
+        <div class="footer-social d-flex">
+          Kết nối với ALS
+          <div class="d-flex">
+            <a class="social-item" href="#"><img src="assets/images/footer/linkdin.svg" alt="linkdin"></a>
+            <a class="social-item" href="#"><img src="assets/images/footer/fb.svg" alt="facebook"></a>
+            <a class="social-item" href="#"><img src="assets/images/footer/twitter.svg" alt="twitter"></a>
+            <a class="social-item" href="#"><img src="assets/images/footer/ytb.svg" alt="youtube"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="./assets/js/bundle.js"></script></body>
+
+</html>
