@@ -1,8 +1,5 @@
 import $ from "jquery";
-import Scrollbar from 'smooth-scrollbar';
 import "slick-carousel";
-
-Scrollbar.init(document.querySelector('.wraper'));
 
 /* eslint-disable */
 const tabItem = document.querySelectorAll(".item, .sub-item");
@@ -201,7 +198,7 @@ $(window)
 
 $(".block-carousel").slick({
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -227,7 +224,7 @@ $(".block-carousel").slick({
 });
 $(".news-slider").slick({
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -237,8 +234,7 @@ $(".news-slider").slick({
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-      },
-    },
+      },},
     {
       breakpoint: 767,
       settings: {
@@ -262,14 +258,14 @@ $(".main-carousel").slick({
   dots: true,
   dotsClass: 'slick-dots container',
   autoplay: true,
-  infinite: false,
+  infinite: true,
   speed: 300,
 });
 
 $(".corevalue-slider").slick({
   dots: false,
   // arrows: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -592,6 +588,6 @@ function parallax() {
   var scrolled = window.pageYOffset;
   var parallax = document.querySelector(".parallax");
   // You can adjust the 0.4 to change the speed
-	var coords = (scrolled * -0.5) + 'px'
+	var coords = (scrolled * -0.3) + 'px'
   parallax.style.transform = 'translateY(' + coords + ')';
 };

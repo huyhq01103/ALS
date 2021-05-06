@@ -1,4 +1,8 @@
 header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
   display: flex;
   padding: 10px 0 9px;
   border-bottom: 1px solid #eee;
@@ -187,6 +191,7 @@ header {
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
     border-radius: 5px;
     margin-top: 5px;
+    white-space: nowrap;
   }
 
   .language .lang-nav div {
@@ -322,7 +327,6 @@ header {
         top: 100%;
         text-align: left;
         background-color: #222222;
-        z-index: 9999;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         filter: alpha(opacity=0);
         opacity: 0;
@@ -351,8 +355,8 @@ header {
           &:hover > ul.submenu.lv2 {
             left: 100%;
             opacity: 1;
-            z-index: 9;
-            max-width: 500px;
+            z-index: -1;
+            // max-width: 500px;
           }
           a {
             position: relative;
@@ -360,9 +364,9 @@ header {
           }
         }
         &.lv2 {
-          max-width: 0;
-          opacity: 0;
-          left: calc(100% - 30px);
+          // max-width: 0;
+          // opacity: 0;
+          left: 0;
           top: 0 !important;
           margin-top: 0;
           height: 100%;
@@ -527,6 +531,9 @@ header {
         .language {
           font-size: 16px;
           font-weight: 600;
+          .lang-nav {
+            top: -75px;
+          }
         }
       }
       .main-nav {

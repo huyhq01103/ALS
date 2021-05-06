@@ -92,6 +92,7 @@
 .top-banner {
     margin-bottom: 50px;
     position: relative;
+    z-index: 9;
     @include xs-screen() {
         margin-bottom: 25px;
     }

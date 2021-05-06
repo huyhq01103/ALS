@@ -3,6 +3,8 @@
 }
 .main-carousel {
   z-index: 9;
+  max-height: 70vh;
+  overflow: hidden;
   .slick-arrow {
     position: absolute;
     border: none;
@@ -108,6 +110,9 @@
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 9;
+  @include laptop_screen() {
+    bottom: 42%;
+  }
   h2 {
     // width: percentage(384/1200);
     line-height: 130%;
@@ -119,7 +124,7 @@
     bottom: 80px;
     text-align: center;
     h2 {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
 }
@@ -137,7 +142,7 @@
       max-width: 267px;
       height: 100%;
       background: url('../images/bg_left.png') no-repeat 0% 58%;
-      z-index: -1;
+      z-index: -2;
     }
     &::after {
       content: '';
@@ -148,7 +153,7 @@
       max-width: 386px;
       height: 100%;
       background: url('../images/bg_right.png') no-repeat 100% 58%;
-      z-index: -1;
+      z-index: -2;
     }
   }
 }

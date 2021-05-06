@@ -88,19 +88,29 @@
         margin-right: 10px;
     }
 }
-
-.parallax {
-    display: block;
-    
-    height: 100%;
+.parallax-wrapper {
+    overflow-y: hidden;
     min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    &.short {
+        min-height: 300px;
+    }
     @include xs-screen() {
         min-height: 400px;
     }
+}
+.parallax {
+    display: block;
+    min-height: 150%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
     &.plx-terminal {
         background-image: url("../images/parallax/about-full.jpg");
         @include xs-screen() {
@@ -130,13 +140,13 @@
     }
     &.plx-contact {
         background-image: url("../images/parallax/contact-banner.jpg");
-        min-height: 300px;
+        // min-height: 300px;
     }
     &.plx-support {
         background-image: url("../images/parallax/support.jpg");
-        min-height: 300px;
+        // min-height: 300px;
     }
-    &.about-block {
+    &.plx-about {
         background-image: url("../images/parallax/about-block.jpg");
         @include xs-screen() {
             background-image: url("../images/parallax/about-block-mb.jpg");
