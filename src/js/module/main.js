@@ -35,8 +35,10 @@ function toggleShow() {
     if (tab.dataset.actabGroup === group) {
       if (tab.dataset.actabId === id) {
         tab.classList.add("active");
+        tab.parentElement.classList.add("active");
       } else {
         tab.classList.remove("active");
+        tab.parentElement.classList.remove("active");
       }
     }
   });

@@ -6,7 +6,26 @@
     padding: 0 0 70px;
     .table-title {
         text-transform: uppercase;
+    }
+    .title-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 10px;
+    }
+    .fly-info {
+        display: flex;
+        align-items: center;
+        .fly-info-item {
+            padding-left: 30px;
+            margin-left: 30px;
+            b {
+                margin-right: 20px;
+            }
+            &:last-child {
+                border-left: 1px solid #C4C4C4;
+            }
+        }
     }
     .table-info-item {
         padding: 10px 0;

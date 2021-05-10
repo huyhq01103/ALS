@@ -36,6 +36,9 @@
 .full--banner {
     position: relative;
     padding: 80px 0 0;
+    .container {
+        position: relative;
+    }
     @include xs-screen() {
         padding: 30px 0 0;
     }
@@ -191,13 +194,16 @@
     padding: 25px 0 0;
 }
 #certificate {
-    padding: 40px 0 0;
+    padding: 70px 0 0;
 }
 #related {
     margin-bottom: 30px;
 }
 .procedure-tabs {
     margin-top: -27px;
+    .tab-content {
+        padding-bottom: 10px;
+    }
 }
 .col-md-7 {
     img {
